@@ -29,3 +29,4 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
