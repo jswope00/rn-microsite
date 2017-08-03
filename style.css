@@ -16,3 +16,34 @@ Text Domain: pluto-by-osetin-child
 	padding: 15px;
 }
 
+.featured-items-header {
+	color: #111;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	background-color: #fff;
+	padding:0px;
+	white-space: no-wrap;
+	overflow: hidden;
+	padding: 15px 20px 15px 40px;
+	vertical-align: middle;
+}
+
+.menu-block .logo a span {
+	color: #3c5b68;
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.os-container-bottom .index-filter-bar {
+	border-top: none;
+}
+
+.os-container-bottom .index-filter-bar .index-filter-categories .index-filter-option {
+	padding: 4px 4px;
+	margin-right: 8px;
+}
+
+
+ @media screen and (max-width: 1250px) {
+    .os-container-bottom {
+    	display: none;
+    }
+  }

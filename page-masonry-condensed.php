@@ -7,6 +7,28 @@ get_header(); ?>
     <?php require_once(get_template_directory() . '/inc/partials/hero-image.php') ?>
     <?php require_once(get_template_directory() . '/inc/partials/featured-slider.php') ?>
     <?php osetin_show_filter_bar(); ?>
+
+
+    <div class="os-container-bottom">
+      <div class="index-filter-bar color-scheme-light">
+        <div class="index-filter-w">
+          <!--<div class="index-filter-label"><i class="os-new-icon os-new-icon-thin-0041_filter_funnel"></i><span>Filter</span></div>-->
+            <div class="index-filter-categories">
+              <?php {
+              $categories_to_show_as_buttons = osetin_get_field('categories_to_show_as_buttons', $post_id, false);
+              $index = 1;
+              echo '<div class="index-filter-sub-label">'.esc_html__('Category', 'pluto').'</div>';
+              foreach($categories_to_show_as_buttons as $category_id){
+                // if($index == 4) break;
+                echo '<button class="index-filter-option" data-filter-value="filter-cat-'.$category_id.'">'.get_the_category_by_ID($category_id).'</button>';
+                $index++;
+              }
+              } ?>
+            </div>
+        </div>
+      </div>
+    </div>
+          
 <div class="main-content-m">
   <?php os_the_primary_sidebar('left', true); ?>
   <div class="main-content-i">
