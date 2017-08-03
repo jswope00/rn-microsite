@@ -5,14 +5,19 @@
       <?php osetin_get_media_content(); ?>
 
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
-	    <?php if('tweets' == get_post_type() ){ ?>
+	    <?php if('tweet' == get_post_type() ){ ?>
 	    	<div class="post-content-tweet">
 	      		<?php the_content(); ?>
 	      	</div>
 	    <?php }else{ ?>
         	<div class="post-content-body">
 	            <?php if(os_is_post_element_active('title')): ?>
-	              <h4 class="post-title entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h4>
+                <?php if('video' != get_post_format() ) { ?>
+	                <h4 class="post-title entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h4>
+                <?php }else{ ?>
+                  <!--If it is a video, don't link to the wordpress page-->
+                  <h4 class="post-title entry-title"><?php the_title(); ?></h4>
+                <?php } ?>  
 	            <?php endif; ?>
 	            <?php if(os_is_post_element_active('excerpt')): ?>
 	              <div class="post-content entry-summary"><?php echo os_excerpt(get_field('index_excerpt_length', 'option'), os_is_post_element_active('read_more')); ?></div>

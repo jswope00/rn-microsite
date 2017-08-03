@@ -14,7 +14,7 @@ function pluto_child_enqueue_styles() {
 	  // Our custom post type function
 function create_posttype() {
 
-  register_post_type( 'tweets',
+  register_post_type( 'tweet',
   // CPT Options
     array(
       'labels' => array(

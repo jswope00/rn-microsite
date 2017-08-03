@@ -175,6 +175,14 @@
 
     <?php endif; ?>
   </div>
+  <!--Hide the featured items header..
+  <div class="os-container">
+    <div class="featured-items-header">
+      Featured Items:
+    </div>
+  </div>
+  ..Stop hiding featured items header-->
+  <?php echo do_shortcode('[slide-anything id="1558"]'); ?>
   <div class="menu-toggler-w">
     <a href="#" class="menu-toggler">
       <i class="os-new-icon os-new-icon-menu"></i>

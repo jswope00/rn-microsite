@@ -7,7 +7,7 @@
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
 
         <div class="post-content-body">
-          <?php if('tweets' == get_post_type() ){ ?>
+          <?php if('tweet' == get_post_type() ){ ?>
             <?php the_content(); ?>
           <?php }else{ ?>
             <?php if(os_is_post_element_active('title')): ?>
