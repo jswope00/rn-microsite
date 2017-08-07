@@ -175,14 +175,27 @@
 
     <?php endif; ?>
   </div>
-  <!--Hide the featured items header..
   <div class="os-container">
     <div class="featured-items-header">
-      Featured Items:
+      <span class="featured-items-title">FEATURED COVERAGE:</span>
+      <div class="dtr-catboxes-wrapper clearfix">
+        <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3">
+          <li>
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/pills_blue.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Novel Treatments </a></div>
+          </li>
+          <li>
+            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Biologics </a></div>
+          </li>
+          <li>
+            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Gout &amp; Pain </a></div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  ..Stop hiding featured items header-->
+  <!--Comment out menu..
   <?php echo do_shortcode('[slide-anything id="1558"]'); ?>
+  ..End Comment out Menu-->
   <div class="menu-toggler-w">
     <a href="#" class="menu-toggler">
       <i class="os-new-icon os-new-icon-menu"></i>

@@ -20,11 +20,15 @@ Text Domain: pluto-by-osetin-child
 	color: #111;
 	border-top: 1px solid rgba(0,0,0,0.2);
 	background-color: #fff;
-	padding:0px;
+	padding:15px 0 0 0;
 	white-space: no-wrap;
 	overflow: hidden;
-	padding: 15px 20px 15px 40px;
 	vertical-align: middle;
+}
+
+.featured-items-title {
+	color: rgba(0,0,0,0.6);
+	padding: 0px 30px 0px 30px;
 }
 
 .menu-block .logo a span {
@@ -41,9 +45,117 @@ Text Domain: pluto-by-osetin-child
 	margin-right: 8px;
 }
 
+.dtr-col-gap-30px {
+    margin: 0 -15px;
+}
+
+.dtr-col-list {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding: 0px 15px 0px 15px;
+}
+
+.dtr-col-3 li {
+    width: 33.33333333%;
+}
+
+.dtr-col-gap-30px li {
+    padding: 0 15px 15px 15px;
+}
+
+.dtr-col-list li {
+    float: left;
+    display: inline-block;
+}
+
+.dtr-catbox, .dtr-catbox:hover .dtr-catbox-link {
+    color: #3276b1;
+}
+
+.dtr-catbox {
+    background-color: #f6f6f6;
+}
+
+.dtr-catbox {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 1px;
+    overflow: hidden;
+    padding: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+}
+
+.dtr-catbox:hover .dtr-catbox-link {
+	background-color: #428bca;
+}
+
+.dtr-catbox:hover .dtr-catbox-link {
+	color: #eee;
+}
+
+.dtr-catbox-link {
+    font-family: 'Oswald';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    background: #eee;
+}
+
+.dtr-catbox-link:hover {
+	text-decoration: none;
+}
+
+.dtr-catbox-link, .dtr-meta-category a, .wp-caption figcaption {
+    color: #428bca;
+}
+
+.dtr-catbox-link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    -moz-transition: padding .3s ease-in,font-size 0.3s ease;
+    -o-transition: padding .3s ease-in,font-size 0.3s ease;
+    -webkit-transition: padding .3s ease-in,font-size 0.3s ease;
+    transition: padding .3s ease-in,font-size 0.3s ease;
+}
 
  @media screen and (max-width: 1250px) {
     .os-container-bottom {
     	display: none;
     }
   }
+
+@media screen and (max-width: 767px) {
+.featured-items-title {
+	padding: 0px 15px 0px 15px;
+}
+
+.dtr-col-1 li, .dtr-col-3 li, .dtr-col-5 li {
+    width: 100%;
+    height: 90px;
+}
+
+.dtr-catbox {
+	height: 90px;
+}
+
+.dtr-col-list {
+    padding: 0px 0px 0px 0px;
+}
+}
