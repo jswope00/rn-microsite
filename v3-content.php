@@ -30,7 +30,7 @@
       <?php } ?>
     </div>
     <?php if(os_is_post_element_active('date') || os_is_post_element_active('author') || os_is_post_element_active('like') || os_is_post_element_active('view_count')): ?>
-      <div class="post-meta entry-meta">
+      <div class="post-meta entry-meta" <?php post_class(); ?>>
 
         <?php global $show_author_face; ?>
         <?php if(!isset($show_author_face)) $show_author_face = false; ?>

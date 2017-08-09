@@ -60,6 +60,10 @@ Text Domain: pluto-by-osetin-child
     width: 33.33333333%;
 }
 
+.dtr-col-4 li {
+    width: 25%;
+}
+
 .dtr-col-gap-30px li {
     padding: 0 15px 15px 15px;
 }
@@ -104,7 +108,6 @@ Text Domain: pluto-by-osetin-child
 
 .dtr-catbox-link {
     font-family: 'Oswald';
-    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     background: #eee;
@@ -121,7 +124,7 @@ Text Domain: pluto-by-osetin-child
 .dtr-catbox-link {
     display: block;
     padding: 10px 20px;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 28px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -146,7 +149,7 @@ Text Domain: pluto-by-osetin-child
 	padding: 0px 15px 0px 15px;
 }
 
-.dtr-col-1 li, .dtr-col-3 li, .dtr-col-5 li {
+.dtr-col-1 li, .dtr-col-3 li, .dtr-col-4 li, .dtr-col-5 li {
     width: 100%;
     height: 90px;
 }

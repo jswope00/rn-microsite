@@ -30,3 +30,14 @@ function create_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 
+// Include tweeets inside archive.php
+function include_tweets( $query ) {
+  if( $query->is_date() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'tweet'
+    ));
+    return $query;
+  }
+}
+add_filter( 'pre_get_posts', 'include_tweets' );
+
