@@ -54,6 +54,12 @@
               <?php endif; ?>
             </a>
           </div>
+          <div class="sponsor">
+            <a href="https://www.google.com">
+              <span>Sponsored by: </span>
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_logo/96f509c4ea26de55ede9ec35f923fd20" style="width: 100px;" alt="">
+            </a>
+          </div>
           <div class="menu-activated-on-hover menu-w">
             <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
           </div>
@@ -82,6 +88,12 @@
               <?php if(get_field('logo_text', 'option')): ?>
                 <span><?php the_field('logo_text', 'option'); ?></span>
               <?php endif; ?>
+            </a>
+          </div>
+          <div class="sponsor">
+            <a href="https://www.google.com">
+              <span>Sponsored by: </span>
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_logo/96f509c4ea26de55ede9ec35f923fd20" style="width: 100px;" alt="">
             </a>
           </div>
           <div class="menu-activated-on-hover menu-w">
@@ -191,7 +203,7 @@
             <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Psoriatic Arthritis </a></div>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Biosimilars </a></div>
+            <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Biosimilars </a></div>
           </li>
         </ul>
       </div>
@@ -213,6 +225,7 @@
         <span><?php the_field('logo_text', 'option'); ?></span>
       <?php endif; ?>
     </a>
+    <br><span style="padding-bottom: 10px;">Sponsored by Horizon Pharma<span>
       <a href="#" class="sidebar-toggler">
         <i class="os-new-icon os-new-icon-grid"></i>
         <span class="sidebar-toggler-label"><?php _e('Sidebar', 'pluto') ?></span>

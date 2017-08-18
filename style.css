@@ -67,6 +67,21 @@ Text Domain: pluto-by-osetin-child
 .menu-block .logo a span {
 	color: #3c5b68;
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+}
+
+.menu-block .sponsor {
+    text-align: right;
+}
+
+.menu-block .sponsor a span {
+    color: #3c5b68;
+
+    vertical-align: middle;
+}
+
+.menu-toggler-w {
+    max-height: 59px;
 }
 
 .os-container-bottom .index-filter-bar {
@@ -131,6 +146,8 @@ Text Domain: pluto-by-osetin-child
     border-image: initial;
 }
 
+
+
 .dtr-catbox:hover .dtr-catbox-link {
 	background-color: #428bca;
 }
@@ -171,11 +188,37 @@ Text Domain: pluto-by-osetin-child
     transition: padding .3s ease-in,font-size 0.3s ease;
 }
 
+.dtr-catbox1 .dtr-catbox-link {
+    background-color: #FFF8E6;
+}
+
+.dtr-catbox2 .dtr-catbox-link {
+    background-color: #C9D2E3;
+}
+
+
+.dtr-catbox3 .dtr-catbox-link {
+    background-color: #FFEAE6;
+}
+
+.dtr-catbox4 .dtr-catbox-link {
+    background-color: #E0EAD3;
+}
+
+
+
+
+
+
 .category-uncategorized .post-categories {
     display: none; /*hide the uncategorized tags */
 }
 
-.category-gout-crystal .post-meta  {
+.post-body {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.category-gout-crystal .post-body, .category-gout-crystal .post-meta  {
     background-color: #FFF8E6 !important;
 }
 
@@ -183,12 +226,20 @@ Text Domain: pluto-by-osetin-child
     background-color: #FFEFC9 !important;
 }
 
-.category-psa-spa .post-meta {
+.category-psa-spa .post-body, .category-psa-spa .post-meta {
     background-color: #FFEAE6 !important;
 }
 
 .category-psa-spa .post-meta .meta-like {
     background-color: #FFD2C9 !important;
+}
+
+.category-biologic-novel-rx .post-body, .category-biologic-novel-rx .post-meta {
+    background-color: #E0EAD3 !important;
+}
+
+.category-biologic-novel-rx .post-meta .meta-like {
+    background-color: #D4E9B9 !important;
 }
 
 .load-more-posts-button-w {
