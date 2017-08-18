@@ -30,7 +30,8 @@
       <?php } ?>
     </div>
     <?php if(os_is_post_element_active('date') || os_is_post_element_active('author') || os_is_post_element_active('like') || os_is_post_element_active('view_count')): ?>
-      <div class="post-meta entry-meta" <?php post_class(); ?>>
+      <div <?php post_class(); ?>>
+      <div class="post-meta entry-meta">
 
         <?php global $show_author_face; ?>
         <?php if(!isset($show_author_face)) $show_author_face = false; ?>
@@ -50,7 +51,9 @@
         <?php }else{ ?>
 
           <?php if(os_is_post_element_active('category')): ?>
-            <?php echo get_the_category_list(); ?>
+            <div class="category-list">
+              <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
+            </div>
           <?php endif; ?>
           <?php if(os_is_post_element_active('date')): ?>
             <div class="meta-date">
@@ -77,7 +80,7 @@
         <?php } ?>
 
 
-
+        </div>
       </div>
     <?php endif; ?>
   </article>

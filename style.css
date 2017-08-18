@@ -31,6 +31,39 @@ Text Domain: pluto-by-osetin-child
 	padding: 0px 30px 0px 30px;
 }
 
+.index-filter-formats {
+    border-right: 1px solid rgba(0,0,0,0.1);
+    margin-right:20px;
+    padding-right:20px;
+}
+
+.index-filter-days {
+    padding-right: 20px;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.index-filter-days .index-filter-option {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.05);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-size: 10px;
+    outline: none;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.index-filter-days .index-filter-option:hover {
+    background-color: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
 .menu-block .logo a span {
 	color: #3c5b68;
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -136,6 +169,30 @@ Text Domain: pluto-by-osetin-child
     -o-transition: padding .3s ease-in,font-size 0.3s ease;
     -webkit-transition: padding .3s ease-in,font-size 0.3s ease;
     transition: padding .3s ease-in,font-size 0.3s ease;
+}
+
+.category-uncategorized .post-categories {
+    display: none; /*hide the uncategorized tags */
+}
+
+.category-gout-crystal .post-meta  {
+    background-color: #FFF8E6 !important;
+}
+
+.category-gout-crystal .post-meta .meta-like {
+    background-color: #FFEFC9 !important;
+}
+
+.category-psa-spa .post-meta {
+    background-color: #FFEAE6 !important;
+}
+
+.category-psa-spa .post-meta .meta-like {
+    background-color: #FFD2C9 !important;
+}
+
+.load-more-posts-button-w {
+    padding-top: 150px; // bit of a hack to prevent tweets from overlapping this. 
 }
 
  @media screen and (max-width: 1250px) {

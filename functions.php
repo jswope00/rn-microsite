@@ -23,6 +23,7 @@ function create_posttype() {
       ),
       'public' => true,
       'has_archive' => true,
+      'taxonomies'  => array( 'category' ),
       'rewrite' => array('slug' => 'tweets'),
     )
   );
