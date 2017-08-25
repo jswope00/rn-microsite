@@ -50,15 +50,16 @@
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
               <?php endif; ?>
               <?php if(get_field('logo_text', 'option')): ?>
-                <?php if(is_category('gout-crystal')) { ?>
-                  <span><?php the_field('logo_text', 'option'); ?>: Gout</span>
-                <?php } elseif(is_category('psa-spa')) { ?>
-                  <span><?php the_field('logo_text', 'option'); ?>: Psoriatic Arthritis</span>
-                <?php } elseif(is_category('biologics-novel-rx')) { ?>
-                  <span><?php the_field('logo_text', 'option'); ?>: Biosimilars</span>
-                <?php } else { ?>
-                  <span><?php the_field('logo_text', 'option'); ?></span>
-                <?php } ?>
+                <div class="logo_text">
+                  <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
+                  <?php if(is_category('gout-crystal')) { ?>
+                    <br><h5>Expanded coverage of Gout sponsored by Merck</h5>
+                  <?php } elseif(is_category('psa-spa')) { ?>
+                    <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Novartis Pharmaceuticals</h5>
+                  <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                    <br><h5>Expanded coverage of Biologics sponsorsed by AstraZeneca</h5>
+                  <?php } ?>
+                </div>
               <?php endif; ?>
             </a>
           </div>
@@ -66,10 +67,10 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <img src="http://photos.prnewswire.com/prnvar/20100121/LA41294LOGO" style="width: 100px;" alt="">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/child-images/Amgen-logo.png" style="width: 100px;" alt="">
                 <?php } elseif(is_category('psa-spa')) { ?>
                   <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
-                <?php } elseif(is_category('biologics-novel-rx')) { ?>
+                <?php } elseif(is_category('biologic-novel-rx')) { ?>
                   <img src="biologic" style="height: 60px;" alt="">
                 <?php } else { ?>
                 <img src="https://d2q79iu7y748jz.cloudfront.net/s/_logo/96f509c4ea26de55ede9ec35f923fd20" style="width: 100px;" alt="">
@@ -102,15 +103,16 @@
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
               <?php endif; ?>
               <?php if(get_field('logo_text', 'option')): ?>
+              <div class="logo_text">
+                <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <span><?php the_field('logo_text', 'option'); ?>: Gout</span>
+                  <br><h5>Expanded coverage of Gout sponsored by Merck</h5>
                 <?php } elseif(is_category('psa-spa')) { ?>
-                  <span><?php the_field('logo_text', 'option'); ?>: Psoriatic Arthritis</span>
-                <?php } elseif(is_category('biologics-novel-rx')) { ?>
-                  <span><?php the_field('logo_text', 'option'); ?>: Biosimilars</span>
-                <?php } else { ?>
-                  <span><?php the_field('logo_text', 'option'); ?></span>
+                  <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Novartis Pharmaceuticals</h5>
+                <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                  <br><h5>Expanded coverage of Biologics sponsorsed by AstraZeneca</h5>
                 <?php } ?>
+              </div>
               <?php endif; ?>
             </a>
           </div>
@@ -118,10 +120,10 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <img src="http://photos.prnewswire.com/prnvar/20100121/LA41294LOGO" style="width: 100px;" alt="">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/child-images/Amgen-logo.png" style="width: 100px;" alt="">
                 <?php } elseif(is_category('psa-spa')) { ?>
                   <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
-                <?php } elseif(is_category('biologics-novel-rx')) { ?>
+                <?php } elseif(is_category('biologic-novel-rx')) { ?>
                   <img src="biologic" style="height: 60px;" alt="">
                 <?php } else { ?>
                 <img src="https://d2q79iu7y748jz.cloudfront.net/s/_logo/96f509c4ea26de55ede9ec35f923fd20" style="width: 100px;" alt="">
@@ -258,10 +260,10 @@
       <?php endif; ?>
     </a>
     <?php if(is_category('gout-crystal')) { ?>
-      <br><span style="padding-bottom: 10px;">Sponsored by Watson<span>
+      <br><span style="padding-bottom: 10px;">Expanded Gout coverage sponsored by Merck<span>
     <?php } elseif(is_category('psa-spa')) { ?>
-      <br><span style="padding-bottom: 10px;">Sponsored by Celgene<span>
-    <?php } elseif(is_category('biologics-novel-rx')) { ?>
+      <br><span style="padding-bottom: 10px;">Expanded Psoriatic Arthritis coverage sponsored by Novartis Pharmaceuticals<span>
+    <?php } elseif(is_category('biologic-novel-rx')) { ?>
       <br><span style="padding-bottom: 10px;">Sponsored by Other<span>
     <?php } else { ?>
       <br><span style="padding-bottom: 10px;">Sponsored by Horizon Pharma<span>

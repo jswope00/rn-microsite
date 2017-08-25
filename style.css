@@ -70,6 +70,11 @@ Text Domain: pluto-by-osetin-child
     font-size: 40px;
 }
 
+.menu-block .logo a img {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .menu-block .sponsor {
     text-align: right;
 }
@@ -78,6 +83,12 @@ Text Domain: pluto-by-osetin-child
     color: #3c5b68;
 
     vertical-align: middle;
+}
+
+.logo_text {
+    display: inline-table;
+    height: 60px;
+
 }
 
 .menu-toggler-w {

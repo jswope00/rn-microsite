@@ -15,19 +15,7 @@ get_header(); ?>
     <?php os_the_primary_sidebar('left'); ?>
     <div class="main-content-i">
         <?php if ( have_posts() ) : ?>
-          <?php if(!is_category('gout-crystal') && !is_category('psa-spa') && !is_category('biologics-novel-rx')) : ?>
-            <header class="archive-header">
-              <h3><?php printf( __( 'Category Archives: %s', 'pluto' ), single_cat_title( '', false ) ); ?></h3>
 
-              <?php
-                // Show an optional term description.
-                $term_description = term_description();
-                if ( ! empty( $term_description ) ) :
-                  printf( '<div class="taxonomy-description">%s</div>', $term_description );
-                endif;
-              ?>
-            </header><!-- .archive-header -->
-          <?php endif; ?>
           <?php osetin_show_filter_bar('option'); ?>
           <?php require_once(get_template_directory() . '/inc/set-layout-vars.php') ?>
           <div class="content side-padded-content">
