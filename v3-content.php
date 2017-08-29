@@ -8,6 +8,11 @@
 	    <?php if('tweet' == get_post_type() ){ ?>
 	    	<div class="post-content-tweet">
 	      		<?php the_content(); ?>
+            <?php if(os_is_post_element_active('category')): ?>
+              <div class="category-list">
+                <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
+              </div>
+            <?php endif; ?>
 	      	</div>
 	    <?php }else{ ?>
         	<div class="post-content-body">
@@ -25,6 +30,11 @@
 	            <?php if(os_is_post_element_active('external_link_button')): ?>
 	              <?php echo osetin_get_external_link_button(); ?>
 	            <?php endif; ?>
+              <?php if(os_is_post_element_active('category')): ?>
+                <div class="category-list">
+                  <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
+                </div>
+              <?php endif; ?>
 	        </div>
           <?php } ?>
       <?php } ?>
@@ -49,12 +59,6 @@
             </div>
 
         <?php }else{ ?>
-
-          <?php if(os_is_post_element_active('category')): ?>
-            <div class="category-list">
-              <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
-            </div>
-          <?php endif; ?>
           <?php if(os_is_post_element_active('date')): ?>
             <div class="meta-date">
               <i class="fa os-icon-clock-o"></i>
