@@ -18,15 +18,16 @@ get_header(); ?>
 
           <?php osetin_show_filter_bar('option'); ?>
           <?php require_once(get_template_directory() . '/inc/set-layout-vars.php') ?>
+          <?php require_once(get_template_directory() . '/inc/osetin-custom-index-query.php'); ?>
           <div class="content side-padded-content">
-            <div class="index-isotope <?php echo $isotope_class; ?>" data-layout-mode="<?php echo $layout_mode; ?>">
+            <div class="index-isotope v3 <?php echo $isotope_class; ?>" data-layout-mode="<?php echo $layout_mode; ?>">
               <?php $os_current_box_counter = 1; $os_ad_block_counter = 0; ?>
               <?php
               // Start the Loop.
-              while ( have_posts() ) : the_post();
-                get_template_part( $template_part, get_post_format() );
-                os_ad_between_posts();
-              endwhile; ?>
+              if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                   <?php get_template_part( 'v3-content', get_post_format() ); ?>
+                   <?php os_ad_between_posts(); ?>
+              <?php endwhile; endif; ?>
 
             </div>
             <?php require_once(get_template_directory() . '/inc/isotope-navigation.php') ?>

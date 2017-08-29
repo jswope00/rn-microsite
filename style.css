@@ -13,7 +13,7 @@ Text Domain: pluto-by-osetin-child
 */
 
 .post-content-tweet {
-	padding: 15px;
+	padding: 15px 15px 30px 15px;
 }
 
 .featured-items-header {
@@ -218,7 +218,15 @@ Text Domain: pluto-by-osetin-child
 
 
 
+.index-isotope.v3 article.pluto-post-box ul.post-categories {
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
 
+.index-isotope.v3 article.pluto-post-box ul.post-categories li {
+    display: block;
+}
 
 
 .category-uncategorized .post-categories {
@@ -253,8 +261,18 @@ Text Domain: pluto-by-osetin-child
     background-color: #D4E9B9 !important;
 }
 
+.category-gout-crystal .featured-items-header, 
+.category-psa-spa .featured-items-header, 
+.category-biologic-novel-rx .featured-items-header {
+display: none;
+}
+
 .load-more-posts-button-w {
     padding-top: 150px; // bit of a hack to prevent tweets from overlapping this. 
+}
+
+.index-sort-views {
+    display: none !important;
 }
 
  @media screen and (max-width: 1250px) {
