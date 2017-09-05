@@ -228,16 +228,16 @@
 
         <ul class="dtr-col-list dtr-col-gap-30px dtr-col-4">
           <li>
-            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/pills_blue.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Gout </a></div>
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/pills_blue.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Ankylosing Spondylitis </a></div>
+            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Ankylosing Spondylitis </a></div>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Psoriatic Arthritis </a></div>
+            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa-spa' ) ); ?>" title="#"> Psoriatic Arthritis </a></div>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="#" title="#"> Biosimilars </a></div>
+            <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(http://localhost:8888/microsite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/biologic-novel-rx' ) ); ?>" title="#"> Biosimilars </a></div>
           </li>
         </ul>
       </div>
