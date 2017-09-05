@@ -77,9 +77,11 @@
                 <?php } ?>
             </a>
           </div>
+          <!--Hide main menu..
           <div class="menu-activated-on-hover menu-w">
             <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
           </div>
+          ..End Hide main menu-->
           <?php if(!get_field('hide_search_box_from_top_bar', 'option')){ ?>
             <div class="menu-search-form-w <?php if(!get_field('no_hide_search_box_on_smaller_screens', 'option')) echo 'hide-on-narrow-screens'; ?>">
               <div class="search-trigger"><i class="os-icon-search"></i></div>
@@ -130,9 +132,11 @@
                 <?php } ?>
             </a>
           </div>
+          <!--Hide main menu..
           <div class="menu-activated-on-hover menu-w">
             <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
           </div>
+          ..End Hide main menu-->
           <?php if(!get_field('hide_search_box_from_top_bar', 'option')){ ?>
             <div class="menu-search-form-w <?php if(!get_field('no_hide_search_box_on_smaller_screens', 'option')) echo 'hide-on-narrow-screens'; ?>">
               <div class="search-trigger"><i class="os-icon-search"></i></div>
@@ -167,9 +171,11 @@
           </div>
         </div>
       </div>
+      <!--Hide main menu..
       <div class="menu-activated-on-hover">
         <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
       </div>
+      ..End Hide main menu-->
       <?php } ?>
 
     <?php else: ?>
