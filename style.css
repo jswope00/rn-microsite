@@ -243,27 +243,27 @@ Text Domain: pluto-by-osetin-child
     background-color: #FFEFC9 !important;
 }
 
-.category-tbd .post-body, .category-psa-spa .post-meta {
+.category-as .post-body, .category-as .post-meta {
     background-color: #C6A4C7 !important;
 }
 
-.category-tbd .post-meta .meta-like {
+.category-as .post-meta .meta-like {
     background-color: #C893CA !important;
 }
 
-.category-psa-spa .post-body, .category-psa-spa .post-meta {
+.category-psa .post-body, .category-psa .post-meta {
     background-color: #FFEAE6 !important;
 }
 
-.category-psa-spa .post-meta .meta-like {
+.category-psa .post-meta .meta-like {
     background-color: #FFD2C9 !important;
 }
 
-.category-biologic-novel-rx .post-body, .category-biologic-novel-rx .post-meta {
+.category-gca .post-body, .category-gca .post-meta {
     background-color: #E0EAD3 !important;
 }
 
-.category-biologic-novel-rx .post-meta .meta-like {
+.category-gca .post-meta .meta-like {
     background-color: #D4E9B9 !important;
 }
 
