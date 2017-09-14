@@ -7,7 +7,7 @@
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
         <div class="post-content-body">
           <?php if(os_is_post_element_active('title')): ?>
-            <h4 class="post-title entry-title"><a href="<?php the_field( 'external_link' ); ?>"><?php the_title(); ?></a></h4>
+            <h4 class="post-title entry-title"><a href="<?php the_field( 'external_link' ); ?>"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;<?php the_title(); ?></a></h4>
           <?php endif; ?>
           <?php if(os_is_post_element_active('excerpt')): ?>
             <div class="post-content entry-summary"><?php echo os_excerpt(get_field('index_excerpt_length', 'option'), os_is_post_element_active('read_more')); ?></div>

@@ -72,7 +72,6 @@ Text Domain: pluto-by-osetin-child
 
 .menu-block .logo a img {
     display: inline-block;
-    vertical-align: top;
 }
 
 .menu-block .sponsor {
@@ -86,9 +85,8 @@ Text Domain: pluto-by-osetin-child
 }
 
 .logo_text {
-    display: inline-table;
+    display: inline-block;
     height: 60px;
-
 }
 
 .menu-toggler-w {
@@ -204,7 +202,7 @@ Text Domain: pluto-by-osetin-child
 }
 
 .dtr-catbox2 .dtr-catbox-link {
-    background-color: #C9D2E3;
+    background-color: #C6A4C7;
 }
 
 
@@ -243,6 +241,14 @@ Text Domain: pluto-by-osetin-child
 
 .category-gout-crystal .post-meta .meta-like {
     background-color: #FFEFC9 !important;
+}
+
+.category-tbd .post-body, .category-psa-spa .post-meta {
+    background-color: #C6A4C7 !important;
+}
+
+.category-tbd .post-meta .meta-like {
+    background-color: #C893CA !important;
 }
 
 .category-psa-spa .post-body, .category-psa-spa .post-meta {
