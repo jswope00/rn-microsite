@@ -68,10 +68,12 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/child-images/Amgen-logo.png" style="width: 100px;" alt="">
-                <?php } elseif(is_category('psa-spa')) { ?>
+                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="">
+                <?php } elseif(is_category('as')) { ?>
                   <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
-                <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                <?php } elseif(is_category('psa')) { ?>
+                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+                <?php } elseif(is_category('gca')) { ?>
                   <img src="biologic" style="height: 60px;" alt="">
                 <?php } else { ?>
                 <a href="https://www.lilly.com/" alt="Eli Lilly and Company">
@@ -126,10 +128,12 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/child-images/Amgen-logo.png" style="width: 100px;" alt="">
-                <?php } elseif(is_category('psa-spa')) { ?>
+                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="">
+                <?php } elseif(is_category('as')) { ?>
                   <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
-                <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                <?php } elseif(is_category('psa')) { ?>
+                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+                <?php } elseif(is_category('gca')) { ?>
                   <img src="biologic" style="height: 60px;" alt="">
                 <?php } else { ?>
                 <a href="https://www.lilly.com/" alt="Eli Lilly and Company">
