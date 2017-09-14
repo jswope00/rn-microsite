@@ -16,8 +16,11 @@
             <?php echo osetin_get_external_link_button(); ?>
           <?php endif; ?>
           <?php if(os_is_post_element_active('category')): ?>
-            <?php echo get_the_category_list(); ?>
+            <div style="display:table;"><?php echo get_the_category_list(); ?></div>
           <?php endif; ?>
+	  <div>
+            <a class="read-more" href="<?php the_field( 'external_link' ); ?>" target="_blank"><span>Read More ></span></a>
+          </div>
         </div>
       <?php } ?>
     </div>

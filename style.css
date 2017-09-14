@@ -275,6 +275,23 @@ display: none;
     display: none !important;
 }
 
+.read-more {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 3px 12px;
+    margin-top: 10px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.read-more:hover {
+    background-color: #428bca;
+    color: #fff;
+    text-decoration: none;
+}
+
  @media screen and (max-width: 1250px) {
     .os-container-bottom {
     	display: none;
@@ -297,5 +314,11 @@ display: none;
 
 .dtr-col-list {
     padding: 0px 0px 0px 0px;
+}
+}
+
+@media screen and (max-width: 400px) {
+.logo span {
+    display:block !important;
 }
 }
