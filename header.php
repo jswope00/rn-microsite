@@ -50,13 +50,38 @@
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
               <?php endif; ?>
               <?php if(get_field('logo_text', 'option')): ?>
-                <span><?php the_field('logo_text', 'option'); ?></span>
+                <div class="logo_text">
+                  <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
+                  <?php if(is_category('gout-crystal')) { ?>
+                    <br><h5>Expanded coverage of Gout sponsored by Horizon Pharma</h5>
+                  <?php } elseif(is_category('psa-spa')) { ?>
+                    <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Novartis Pharmaceuticals</h5>
+                  <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                    <br><h5>Expanded coverage of Biologics sponsorsed by AstraZeneca</h5>
+                  <?php } ?>
+                </div>
               <?php endif; ?>
             </a>
           </div>
+          <div class="sponsor">
+            <a href="https://www.google.com">
+              <span>Sponsored by: </span>
+                <?php if(is_category('gout-crystal')) { ?>
+                  <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Horizon_Pharma_logo.jpg" style="width: 100px;" alt="">
+                <?php } elseif(is_category('psa-spa')) { ?>
+                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+                <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                  <img src="biologic" style="height: 60px;" alt="">
+                <?php } else { ?>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
+                <?php } ?>
+            </a>
+          </div>
+		  <!--Hide Main menu on desktop..
           <div class="menu-activated-on-hover menu-w">
             <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
           </div>
+		  ..End Hide Main Menu-->
           <?php if(!get_field('hide_search_box_from_top_bar', 'option')){ ?>
             <div class="menu-search-form-w <?php if(!get_field('no_hide_search_box_on_smaller_screens', 'option')) echo 'hide-on-narrow-screens'; ?>">
               <div class="search-trigger"><i class="os-icon-search"></i></div>
@@ -80,13 +105,38 @@
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
               <?php endif; ?>
               <?php if(get_field('logo_text', 'option')): ?>
-                <span><?php the_field('logo_text', 'option'); ?></span>
+              <div class="logo_text">
+                <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
+                <?php if(is_category('gout-crystal')) { ?>
+                  <br><h5>Expanded coverage of Gout sponsored by Horizon Pharma</h5>
+                <?php } elseif(is_category('psa-spa')) { ?>
+                  <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Novartis Pharmaceuticals</h5>
+                <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                  <br><h5>Expanded coverage of Biologics sponsorsed by AstraZeneca</h5>
+                <?php } ?>
+              </div>
               <?php endif; ?>
             </a>
           </div>
+          <div class="sponsor">
+            <a href="https://www.google.com">
+              <span>Sponsored by: </span>
+                <?php if(is_category('gout-crystal')) { ?>
+                  <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Horizon_Pharma_logo.jpg" style="width: 100px;" alt="">
+                <?php } elseif(is_category('psa-spa')) { ?>
+                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+                <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                  <img src="biologic" style="height: 60px;" alt="">
+                <?php } else { ?>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
+                <?php } ?>
+            </a>
+          </div>
+		  <!--Hide Main menu on desktop..
           <div class="menu-activated-on-hover menu-w">
             <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
           </div>
+	  	  ..End Hide Main menu-->
           <?php if(!get_field('hide_search_box_from_top_bar', 'option')){ ?>
             <div class="menu-search-form-w <?php if(!get_field('no_hide_search_box_on_smaller_screens', 'option')) echo 'hide-on-narrow-screens'; ?>">
               <div class="search-trigger"><i class="os-icon-search"></i></div>
@@ -121,9 +171,11 @@
           </div>
         </div>
       </div>
+	  <!--Hide Main menu on desktop..
       <div class="menu-activated-on-hover">
         <?php wp_nav_menu(array('theme_location'  => 'side_menu', 'fallback_cb' => false, 'container_class' => 'os_menu')); ?>
       </div>
+	  ..End Hide Main menu-->
       <?php } ?>
 
     <?php else: ?>
@@ -175,14 +227,31 @@
 
     <?php endif; ?>
   </div>
-  <!--Hide the featured items header..
   <div class="os-container">
     <div class="featured-items-header">
-      Featured Items:
+      <span class="featured-items-title">FEATURED COVERAGE:</span>
+      <div class="dtr-catboxes-wrapper clearfix">
+
+        <ul class="dtr-col-list dtr-col-gap-30px dtr-col-4">
+          <li>
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/pills_blue.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
+          </li>
+          <li>
+            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Ankylosing Spondylitis </a></div>
+          </li>
+          <li>
+            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa-spa' ) ); ?>" title="#"> Psoriatic Arthritis </a></div>
+          </li>
+          <li>
+            <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/biologic-novel-rx' ) ); ?>" title="#"> Biosimilars </a></div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  ..Stop hiding featured items header-->
+  <!--Comment out menu..
   <?php echo do_shortcode('[slide-anything id="1558"]'); ?>
+  ..End Comment out Menu-->
   <div class="menu-toggler-w">
     <a href="#" class="menu-toggler">
       <i class="os-new-icon os-new-icon-menu"></i>
@@ -196,6 +265,16 @@
         <span><?php the_field('logo_text', 'option'); ?></span>
       <?php endif; ?>
     </a>
+    <?php if(is_category('gout-crystal')) { ?>
+      <br><span style="padding-bottom: 10px;">Expanded Gout coverage sponsored by Horizon Pharma<span>
+    <?php } elseif(is_category('psa-spa')) { ?>
+      <br><span style="padding-bottom: 10px;">Expanded Psoriatic Arthritis coverage sponsored by Novartis Pharmaceuticals<span>
+    <?php } elseif(is_category('biologic-novel-rx')) { ?>
+      <br><span style="padding-bottom: 10px;">Sponsored by Other<span>
+    <?php } else { ?>
+      <br><span style="padding-bottom: 10px;">Sponsored by Horizon Pharma<span>
+    <?php } ?>
+
       <a href="#" class="sidebar-toggler">
         <i class="os-new-icon os-new-icon-grid"></i>
         <span class="sidebar-toggler-label"><?php _e('Sidebar', 'pluto') ?></span>

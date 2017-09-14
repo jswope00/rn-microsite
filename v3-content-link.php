@@ -5,42 +5,23 @@
       <?php osetin_get_media_content(); ?>
 
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
-	    <?php if('tweet' == get_post_type() ){ ?>
-	    	<div class="post-content-tweet">
-	      		<?php the_content(); ?>
-            <?php if(os_is_post_element_active('category')): ?>
-              <div class="category-list">
-                <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
-              </div>
-            <?php endif; ?>
-	      	</div>
-	    <?php }else{ ?>
-        	<div class="post-content-body">
-	            <?php if(os_is_post_element_active('title')): ?>
-                <?php if('video' != get_post_format() ) { ?>
-	                <h4 class="post-title entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h4>
-                <?php }else{ ?>
-                  <!--If it is a video, don't link to the wordpress page-->
-                  <h4 class="post-title entry-title"><?php the_title(); ?></h4>
-                <?php } ?>  
-	            <?php endif; ?>
-	            <?php if(os_is_post_element_active('excerpt')): ?>
-	              <div class="post-content entry-summary"><?php echo os_excerpt(get_field('index_excerpt_length', 'option'), os_is_post_element_active('read_more')); ?></div>
-	            <?php endif; ?>
-	            <?php if(os_is_post_element_active('external_link_button')): ?>
-	              <?php echo osetin_get_external_link_button(); ?>
-	            <?php endif; ?>
-              <?php if(os_is_post_element_active('category')): ?>
-                <div class="category-list">
-                  <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
-                </div>
-              <?php endif; ?>
-	        </div>
-          <?php } ?>
+        <div class="post-content-body">
+          <?php if(os_is_post_element_active('title')): ?>
+            <h4 class="post-title entry-title"><a href="<?php the_field( 'external_link' ); ?>"><?php the_title(); ?></a></h4>
+          <?php endif; ?>
+          <?php if(os_is_post_element_active('excerpt')): ?>
+            <div class="post-content entry-summary"><?php echo os_excerpt(get_field('index_excerpt_length', 'option'), os_is_post_element_active('read_more')); ?></div>
+          <?php endif; ?>
+          <?php if(os_is_post_element_active('external_link_button')): ?>
+            <?php echo osetin_get_external_link_button(); ?>
+          <?php endif; ?>
+          <?php if(os_is_post_element_active('category')): ?>
+            <?php echo get_the_category_list(); ?>
+          <?php endif; ?>
+        </div>
       <?php } ?>
     </div>
     <?php if(os_is_post_element_active('date') || os_is_post_element_active('author') || os_is_post_element_active('like') || os_is_post_element_active('view_count')): ?>
-      <div <?php post_class(); ?>>
       <div class="post-meta entry-meta">
 
         <?php global $show_author_face; ?>
@@ -59,6 +40,7 @@
             </div>
 
         <?php }else{ ?>
+
           <?php if(os_is_post_element_active('date')): ?>
             <div class="meta-date">
               <i class="fa os-icon-clock-o"></i>
@@ -84,7 +66,7 @@
         <?php } ?>
 
 
-        </div>
+
       </div>
     <?php endif; ?>
   </article>

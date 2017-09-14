@@ -23,6 +23,7 @@ function create_posttype() {
       ),
       'public' => true,
       'has_archive' => true,
+      'taxonomies'  => array( 'category' ),
       'rewrite' => array('slug' => 'tweets'),
     )
   );
@@ -30,3 +31,20 @@ function create_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 
+// Include tweeets inside archive.php
+function include_tweets( $query ) {
+  if( $query->is_date() || $query->is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'tweet'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'include_tweets' );
+
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+ 
+    wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+ 
+}

@@ -20,6 +20,9 @@
               <?php echo osetin_get_external_link_button(); ?>
             <?php endif; ?>
           <?php } ?>
+          <?php if(os_is_post_element_active('category')): ?>
+            <?php echo get_the_category_list(); ?>
+          <?php endif; ?>
         </div>
       <?php } ?>
     </div>
@@ -42,10 +45,7 @@
             </div>
 
         <?php }else{ ?>
-
-          <?php if(os_is_post_element_active('category')): ?>
-            <?php echo get_the_category_list(); ?>
-          <?php endif; ?>
+        
           <?php if(os_is_post_element_active('date')): ?>
             <div class="meta-date">
               <i class="fa os-icon-clock-o"></i>

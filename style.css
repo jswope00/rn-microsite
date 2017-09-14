@@ -13,23 +13,86 @@ Text Domain: pluto-by-osetin-child
 */
 
 .post-content-tweet {
-	padding: 15px;
+	padding: 15px 15px 30px 15px;
 }
 
 .featured-items-header {
 	color: #111;
 	border-top: 1px solid rgba(0,0,0,0.2);
 	background-color: #fff;
-	padding:0px;
+	padding:15px 0 0 0;
 	white-space: no-wrap;
 	overflow: hidden;
-	padding: 15px 20px 15px 40px;
 	vertical-align: middle;
+}
+
+.featured-items-title {
+	color: rgba(0,0,0,0.6);
+	padding: 0px 30px 0px 30px;
+}
+
+.index-filter-formats {
+    border-right: 1px solid rgba(0,0,0,0.1);
+    margin-right:20px;
+    padding-right:20px;
+}
+
+.index-filter-days {
+    padding-right: 20px;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.index-filter-days .index-filter-option {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.05);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-size: 10px;
+    outline: none;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.index-filter-days .index-filter-option:hover {
+    background-color: rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.5);
 }
 
 .menu-block .logo a span {
 	color: #3c5b68;
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+}
+
+.menu-block .logo a img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-block .sponsor {
+    text-align: right;
+}
+
+.menu-block .sponsor a span {
+    color: #3c5b68;
+
+    vertical-align: middle;
+}
+
+.logo_text {
+    display: inline-table;
+    height: 60px;
+
+}
+
+.menu-toggler-w {
+    max-height: 59px;
 }
 
 .os-container-bottom .index-filter-bar {
@@ -41,9 +104,204 @@ Text Domain: pluto-by-osetin-child
 	margin-right: 8px;
 }
 
+.dtr-col-gap-30px {
+    margin: 0 -15px;
+}
+
+.dtr-col-list {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding: 0px 15px 0px 15px;
+}
+
+.dtr-col-3 li {
+    width: 33.33333333%;
+}
+
+.dtr-col-4 li {
+    width: 25%;
+}
+
+.dtr-col-gap-30px li {
+    padding: 0 15px 15px 15px;
+}
+
+.dtr-col-list li {
+    float: left;
+    display: inline-block;
+}
+
+.dtr-catbox, .dtr-catbox:hover .dtr-catbox-link {
+    color: #3276b1;
+}
+
+.dtr-catbox {
+    background-color: #f6f6f6;
+}
+
+.dtr-catbox {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 1px;
+    overflow: hidden;
+    padding: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+}
+
+
+
+.dtr-catbox:hover .dtr-catbox-link {
+	background-color: #428bca;
+}
+
+.dtr-catbox:hover .dtr-catbox-link {
+	color: #eee;
+}
+
+.dtr-catbox-link {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    background: #eee;
+}
+
+.dtr-catbox-link:hover {
+	text-decoration: none;
+}
+
+.dtr-catbox-link, .dtr-meta-category a, .wp-caption figcaption {
+    color: #428bca;
+}
+
+.dtr-catbox-link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    -moz-transition: padding .3s ease-in,font-size 0.3s ease;
+    -o-transition: padding .3s ease-in,font-size 0.3s ease;
+    -webkit-transition: padding .3s ease-in,font-size 0.3s ease;
+    transition: padding .3s ease-in,font-size 0.3s ease;
+}
+
+.dtr-catbox1 .dtr-catbox-link {
+    background-color: #FFF8E6;
+}
+
+.dtr-catbox2 .dtr-catbox-link {
+    background-color: #C9D2E3;
+}
+
+
+.dtr-catbox3 .dtr-catbox-link {
+    background-color: #FFEAE6;
+}
+
+.dtr-catbox4 .dtr-catbox-link {
+    background-color: #E0EAD3;
+}
+
+
+
+.index-isotope.v3 article.pluto-post-box ul.post-categories {
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.index-isotope.v3 article.pluto-post-box ul.post-categories li {
+    display: block;
+}
+
+
+.category-uncategorized .post-categories {
+    display: none; /*hide the uncategorized tags */
+}
+
+.post-body {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.category-gout-crystal .post-body, .category-gout-crystal .post-meta  {
+    background-color: #FFF8E6 !important;
+}
+
+.category-gout-crystal .post-meta .meta-like {
+    background-color: #FFEFC9 !important;
+}
+
+.category-psa-spa .post-body, .category-psa-spa .post-meta {
+    background-color: #FFEAE6 !important;
+}
+
+.category-psa-spa .post-meta .meta-like {
+    background-color: #FFD2C9 !important;
+}
+
+.category-biologic-novel-rx .post-body, .category-biologic-novel-rx .post-meta {
+    background-color: #E0EAD3 !important;
+}
+
+.category-biologic-novel-rx .post-meta .meta-like {
+    background-color: #D4E9B9 !important;
+}
+
+.category-gout-crystal .featured-items-header, 
+.category-psa-spa .featured-items-header, 
+.category-biologic-novel-rx .featured-items-header {
+display: none;
+}
+
+.load-more-posts-button-w {
+    padding-top: 150px; // bit of a hack to prevent tweets from overlapping this. 
+}
+
+.index-sort-views {
+    display: none !important;
+}
 
  @media screen and (max-width: 1250px) {
     .os-container-bottom {
     	display: none;
     }
   }
+
+@media screen and (max-width: 767px) {
+.featured-items-title {
+	padding: 0px 15px 0px 15px;
+}
+
+.dtr-col-1 li, .dtr-col-3 li, .dtr-col-4 li, .dtr-col-5 li {
+    width: 100%;
+    height: 90px;
+}
+
+.dtr-catbox {
+	height: 90px;
+}
+
+.dtr-col-list {
+    padding: 0px 0px 0px 0px;
+}
+}
+
+@media screen and (max-width: 400px) {
+.logo span {
+    display:block !important;
+}
+}

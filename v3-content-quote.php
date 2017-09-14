@@ -14,7 +14,7 @@
     <?php endif?>
     <div class="quote-content">
       <div class="quote-icon"><i class="os-icon-thin-042_comment_quote_reply"></i></div>
-      <h2 class="post-content entry-content"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo os_quote_excerpt(25); ?></a></h2>
+      <h2 class="post-content entry-content"><a><?php echo os_quote_excerpt(25); ?></a></h2>
       <div class="quote-author">- <?php the_field('quote_author'); ?></div>
     </div>
   </div>

@@ -6,7 +6,7 @@ get_header(); ?>
 <div class="main-content-w">
     <?php require_once(get_template_directory() . '/inc/partials/hero-image.php') ?>
     <?php require_once(get_template_directory() . '/inc/partials/featured-slider.php') ?>
-    <?php osetin_show_filter_bar(); ?>
+    <?php osetin_show_filter_bar(1474); ?>
 
 
     <div class="os-container-bottom">
@@ -15,7 +15,7 @@ get_header(); ?>
           <!--<div class="index-filter-label"><i class="os-new-icon os-new-icon-thin-0041_filter_funnel"></i><span>Filter</span></div>-->
             <div class="index-filter-categories">
               <?php {
-              $categories_to_show_as_buttons = osetin_get_field('categories_to_show_as_buttons', $post_id, false);
+              $categories_to_show_as_buttons = osetin_get_field('categories_to_show_as_buttons', 1474, false);
               $index = 1;
               echo '<div class="index-filter-sub-label">'.esc_html__('Category', 'pluto').'</div>';
               foreach($categories_to_show_as_buttons as $category_id){
@@ -40,7 +40,7 @@ get_header(); ?>
 
         $double_width_posts_arr = osetin_get_double_width_posts_arr();
         $os_current_box_counter = 1; $os_ad_block_counter = 0;
-        if ( $osetin_query->have_posts() ) : while ( $osetin_query->have_posts() ) : $osetin_query->the_post(); ?>
+        if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php get_template_part( 'v3-content', get_post_format() ); ?>
           <?php os_ad_between_posts(); ?>
         <?php endwhile; endif; ?>
