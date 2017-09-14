@@ -299,9 +299,3 @@ display: none;
     padding: 0px 0px 0px 0px;
 }
 }
-
-@media screen and (max-width: 400px) {
-.logo span {
-    display:block !important;
-}
-}
