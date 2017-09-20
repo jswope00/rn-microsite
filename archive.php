@@ -46,8 +46,8 @@ get_header(); ?>
         <?php endwhile; endif; ?>
 
       </div>
-      <?php if(os_get_next_posts_link($osetin_query)): ?>
-        <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link(new WP_Query($args)); ?>" data-layout-type="v3"></div>
+      <?php if(os_get_next_posts_link($args)): ?>
+        <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($args); ?>" data-layout-type="v3"></div>
         <?php if((os_get_current_navigation_type() == 'infinite_button') || (os_get_current_navigation_type() == 'infinite')): ?>
         <div class="load-more-posts-button-w">
           <a href="#"><i class="os-icon-plus"></i> <span><?php _e('Load More Posts', 'pluto'); ?></span></a>
