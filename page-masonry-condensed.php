@@ -6,7 +6,15 @@ get_header(); ?>
 <div class="main-content-w">
     <?php require_once(get_template_directory() . '/inc/partials/hero-image.php') ?>
     <?php require_once(get_template_directory() . '/inc/partials/featured-slider.php') ?>
-    <?php osetin_show_filter_bar(); ?>
+    <?php osetin_show_filter_bar();
+
+  echo '<div class="index-filter-days">';
+    echo '<a href="/rnmicrosite/2017/08/06"><button class="index-filter-option">Day 1</button></a>';
+    echo '<a href="/rnmicrosite/2017/08/07"><button class="index-filter-option">Day 2</button></a>';
+    echo '<a href="/rnmicrosite/2017/08/08"><button class="index-filter-option">Day 3</button></a>';
+    echo '<a href="/rnmicrosite/2017/08/09"><button class="index-filter-option">Day 4</button></a>';
+  echo '</div>';
+    ?>
 
 
     <div class="os-container-bottom">
@@ -48,7 +56,7 @@ get_header(); ?>
           'ignore_sticky_posts' => 1
         );
         $osetin_sticky = new WP_Query( $stickyArgs );
-        
+
         while ($osetin_sticky->have_posts()) : $osetin_sticky->the_post(); ?>
            <?php get_template_part( 'v3-content', get_post_format() ); ?>
         <?php endwhile; ?>
