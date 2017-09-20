@@ -6,15 +6,7 @@ get_header(); ?>
 <div class="main-content-w">
     <?php require_once(get_template_directory() . '/inc/partials/hero-image.php') ?>
     <?php require_once(get_template_directory() . '/inc/partials/featured-slider.php') ?>
-    <?php osetin_show_filter_bar();
-
-  echo '<div class="index-filter-days">';
-    echo '<a href="/rnmicrosite/2017/08/06"><button class="index-filter-option">Day 1</button></a>';
-    echo '<a href="/rnmicrosite/2017/08/07"><button class="index-filter-option">Day 2</button></a>';
-    echo '<a href="/rnmicrosite/2017/08/08"><button class="index-filter-option">Day 3</button></a>';
-    echo '<a href="/rnmicrosite/2017/08/09"><button class="index-filter-option">Day 4</button></a>';
-  echo '</div>';
-    ?>
+    <?php osetin_show_filter_bar_modified();?>
 
 
     <div class="os-container-bottom">

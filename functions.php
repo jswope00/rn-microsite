@@ -42,7 +42,7 @@ function include_tweets( $query ) {
 }
 add_filter( 'pre_get_posts', 'include_tweets' );
 
-function osetin_show_filter_bar($post_id = false){
+function osetin_show_filter_bar_modified($post_id = false){
   if(!(osetin_get_field('hide_sorting', $post_id) && osetin_get_field('hide_category_filtering', $post_id) && osetin_get_field('hide_format_filtering', $post_id)) && osetin_get_field('show_filter_panel', 'option') && !osetin_get_field('hide_filter_toolbar', $post_id, false)){
     echo '<div class="os-container">';
       $filter_bg_type = os_get_less_var('subBarBackgroundType', 'light');

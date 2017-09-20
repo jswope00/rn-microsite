@@ -6,7 +6,7 @@ get_header(); ?>
 <div class="main-content-w">
     <?php require_once(get_template_directory() . '/inc/partials/hero-image.php') ?>
     <?php require_once(get_template_directory() . '/inc/partials/featured-slider.php') ?>
-    <?php osetin_show_filter_bar(1474); ?>
+    <?php osetin_show_filter_bar_modified(1474); ?>
 
 
     <div class="os-container-bottom">

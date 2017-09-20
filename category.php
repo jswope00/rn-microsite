@@ -16,7 +16,7 @@ get_header(); ?>
     <div class="main-content-i">
         <?php if ( have_posts() ) : ?>
 
-          <?php osetin_show_filter_bar('option'); ?>
+          <?php osetin_show_filter_bar_modified('option'); ?>
           <?php require_once(get_template_directory() . '/inc/set-layout-vars.php') ?>
           <?php require_once(get_template_directory() . '/inc/osetin-custom-index-query.php'); ?>
           <div class="content side-padded-content">
