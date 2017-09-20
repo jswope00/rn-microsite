@@ -10,12 +10,13 @@ $args = array(
 	'posts_per_page' => get_option('posts_per_page'), 
 	'post_status' => 'publish', 
 	'category__in' => get_field('show_only_these_categories'),
-	'post__in'  => get_option( 'sticky_posts' ),
-	'ignore_sticky_posts' => 1
+	
 );
 
 $stickyArgs = array( 
-	'post__in' => get_option('sticky_posts')
+	'posts_per_page' => get_option('posts_per_page'), 
+	'post__in'  => get_option( 'sticky_posts' ),
+	'ignore_sticky_posts' => 1
 );
 
 
