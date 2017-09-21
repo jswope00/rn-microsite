@@ -121,7 +121,11 @@
                       echo "Day 1";
                     }  ?></span>
                   <?php } else { ?>
-                    <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?> Day 1</span>
+                    <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": "); 
+                      if ($current_url == DAY1URL) {
+                        echo "Day 1";
+                      } 
+                    ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
                     <?php } elseif(is_category('psa-spa')) { ?>
                     <?php } elseif(is_category('biologic-novel-rx')) { ?>
