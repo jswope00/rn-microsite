@@ -48,23 +48,13 @@ get_header(); ?>
       </div>
       <?php if(os_get_next_posts_link($args)): ?>
         <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($args); ?>" data-layout-type="v3"></div>
-        <?php if((os_get_current_navigation_type() == 'infinite_button') || (os_get_current_navigation_type() == 'infinite')): ?>
         <div class="load-more-posts-button-w">
           <a href="#"><i class="os-icon-plus"></i> <span><?php _e('Load More Posts', 'pluto'); ?></span></a>
         </div>
-        <?php endif; ?>
       <?php endif; ?>
       <?php
       $temp_query = $wp_query;
       $wp_query = $osetin_query; ?>
-
-      <div class="pagination-w hide-for-isotope">
-        <?php if(function_exists('wp_pagenavi') && os_get_current_navigation_type() != 'default'): ?>
-          <?php wp_pagenavi(); ?>
-        <?php else: ?>
-          <?php posts_nav_link(); ?>
-        <?php endif; ?>
-      </div>
       <?php $wp_query = $temp_query; ?>
       <?php wp_reset_postdata(); ?>
     </div>
