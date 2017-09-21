@@ -37,6 +37,7 @@ function include_tweets( $query ) {
     $query->set( 'post_type', array(
      'post', 'nav_menu_item', 'tweet'
     ));
+    $query->set( 'post__not_in', get_option( 'sticky_posts' ));
     return $query;
   }
 }
