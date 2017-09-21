@@ -122,7 +122,7 @@
                     }  ?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?> Day 1</span>
-                    <?php if(is_category('gout-crystal')) { ?
+                    <?php if(is_category('gout-crystal')) { ?>
                     <?php } elseif(is_category('psa-spa')) { ?>
                     <?php } elseif(is_category('biologic-novel-rx')) { ?>
                     <?php } ?>
