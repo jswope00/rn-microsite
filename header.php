@@ -102,7 +102,7 @@
   <?php endif; ?>
   <?php
     global $wp;
-    $current_url = home_url(add_query_arg(array(),$wp->request));
+    $current_url = home_url(add_query_arg(array(),$wp->request)) . "/";
   ?>
   <div class="menu-block <?php if(get_field('hide_widgets_under_menu', 'option') == TRUE) echo 'hidden-on-smaller-screens'; ?>">
     <?php if(get_current_menu_position() == "top"): ?>
@@ -120,16 +120,16 @@
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": "); 
                       if (strcmp($current_url, DAY1URL) == 0) {
-                        echo "Day 1";
+                        echo ": Day 1";
                       } 
                       if (strcmp($current_url, DAY2URL) == 0) {
-                        echo "Day 2";
+                        echo ": Day 2";
                       } 
                       if (strcmp($current_url, DAY3URL) == 0) {
-                        echo "Day 3";
+                        echo ": Day 3";
                       }
                       if (strcmp($current_url, DAY4URL) == 0) {
-                        echo "Day 4";
+                        echo ": Day 4";
                       } 
                     ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
