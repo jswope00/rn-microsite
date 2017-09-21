@@ -26,7 +26,6 @@ get_header(); ?>
 
               <?php
                 $catID = get_query_var( 'cat' );
-                echo "Kategorija: " . $catID ;
                 $stickyArgs = array( 
                   'posts_per_page' => get_option('posts_per_page'), 
                   'post__in'  => get_option( 'sticky_posts' ),

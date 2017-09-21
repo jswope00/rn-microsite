@@ -60,14 +60,6 @@ get_header(); ?>
       <?php
       $temp_query = $wp_query;
       $wp_query = $osetin_query; ?>
-
-      <div class="pagination-w hide-for-isotope">
-        <?php if(function_exists('wp_pagenavi') && os_get_current_navigation_type() != 'default'): ?>
-          <?php wp_pagenavi(); ?>
-        <?php else: ?>
-          <?php posts_nav_link(); ?>
-        <?php endif; ?>
-      </div>
       <?php $wp_query = $temp_query; ?>
       <?php wp_reset_postdata(); ?>
     </div>
