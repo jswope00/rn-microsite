@@ -100,6 +100,10 @@
     </div>
     </div>
   <?php endif; ?>
+  <?php
+    global $wp;
+    $current_url = home_url(add_query_arg(array(),$wp->request));
+  ?>
   <div class="menu-block <?php if(get_field('hide_widgets_under_menu', 'option') == TRUE) echo 'hidden-on-smaller-screens'; ?>">
     <?php if(get_current_menu_position() == "top"): ?>
       <?php if(get_current_menu_style() == 'v2'){ ?>
@@ -112,10 +116,13 @@
               <?php if(get_field('logo_text', 'option')): ?>
                   <div class="logo_text">
                   <?php if (is_front_page()) { ?>
-                    <span><?php the_field('logo_text', 'option'); echo " - San Diego"; ?></span>
+                    <span><?php the_field('logo_text', 'option'); echo " - San Diego"; 
+                    if ($current_url == DAY1URL) {
+                      echo "Day 1";
+                    }  ?></span>
                   <?php } else { ?>
-                    <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
-                    <?php if(is_category('gout-crystal')) { ?>
+                    <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?> Day 1</span>
+                    <?php if(is_category('gout-crystal')) { ?
                     <?php } elseif(is_category('psa-spa')) { ?>
                     <?php } elseif(is_category('biologic-novel-rx')) { ?>
                     <?php } ?>
