@@ -38,6 +38,7 @@ get_header(); ?>
         <?php
         require_once(get_template_directory() . '/inc/osetin-custom-index-query.php');
 
+
         $double_width_posts_arr = osetin_get_double_width_posts_arr();
         $os_current_box_counter = 1; $os_ad_block_counter = 0;
         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -46,10 +47,10 @@ get_header(); ?>
         <?php endwhile; endif; ?>
 
       </div>
-      <?php if(os_get_next_posts_link($osetin_archive)): 
+      <?php if(os_get_next_posts_link($wp_query)): 
       ?>
 
-        <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($osetin_archive); ?>" data-layout-type="v3"></div>
+        <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($wp_query); ?>" data-layout-type="v3"></div>
         <?php if((os_get_current_navigation_type() == 'infinite_button') || (os_get_current_navigation_type() == 'infinite')): ?>
         <div class="load-more-posts-button-w">
           <a href="#"><i class="os-icon-plus"></i> <span><?php _e('Load More Posts', 'pluto'); ?></span></a>
