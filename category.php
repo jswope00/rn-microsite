@@ -34,7 +34,7 @@ get_header(); ?>
 
                 while ($osetin_sticky->have_posts()) : $osetin_sticky->the_post(); ?>
                   <?php get_template_part( 'v3-content', get_post_format() ); ?>
-                <?php endwhile; ?>
+                <?php endwhile; 
 
               if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                    <?php get_template_part( 'v3-content', get_post_format() ); ?>
