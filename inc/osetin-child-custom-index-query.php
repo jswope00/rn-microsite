@@ -10,15 +10,19 @@ $args = array(
 	'posts_per_page' => get_option('posts_per_page'), 
 	'post_status' => 'publish', 
 	'category__in' => get_field('show_only_these_categories'),
-	
+);
+
+$archiveQuery = array( 
+	'posts_per_page' => get_option('posts_per_page'), 
 );
 
 $stickyArgs = array( 
+	'paged'
 	'posts_per_page' => get_option('posts_per_page'), 
 	'post__in'  => get_option( 'sticky_posts' ),
 	'ignore_sticky_posts' => 1
 );
 
-
+$osetin_archive = new WP_Query( $archiveQuery );
 $osetin_sticky = new WP_Query( $stickyArgs );
 $osetin_query = new WP_Query( $args );
