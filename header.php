@@ -116,14 +116,20 @@
               <?php if(get_field('logo_text', 'option')): ?>
                   <div class="logo_text">
                   <?php if (is_front_page()) { ?>
-                    <span><?php the_field('logo_text', 'option'); echo " - San Diego"; 
-                    if ($current_url == DAY1URL) {
-                      echo "Day 1";
-                    }  ?></span>
+                    <span><?php the_field('logo_text', 'option'); echo " - San Diego";?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": "); 
                       if ($current_url == DAY1URL) {
                         echo "Day 1";
+                      } 
+                      if ($current_url == DAY2URL) {
+                        echo "Day 2";
+                      } 
+                      if ($current_url == DAY3URL) {
+                        echo "Day 3";
+                      } 
+                      if ($current_url == DAY4URL) {
+                        echo "Day 4";
                       } 
                     ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
