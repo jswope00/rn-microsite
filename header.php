@@ -119,16 +119,16 @@
                     <span><?php the_field('logo_text', 'option'); echo " - San Diego";?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": "); 
-                      if ($current_url == DAY1URL) {
+                      if (strcmp($current_url, DAY1URL) == 0) {
                         echo "Day 1";
                       } 
-                      if ($current_url == DAY2URL) {
+                      if (strcmp($current_url, DAY2URL) == 0) {
                         echo "Day 2";
                       } 
-                      if ($current_url == DAY3URL) {
+                      if (strcmp($current_url, DAY3URL) == 0) {
                         echo "Day 3";
-                      } 
-                      if ($current_url == DAY4URL) {
+                      }
+                      if (strcmp($current_url, DAY4URL) == 0) {
                         echo "Day 4";
                       } 
                     ?></span>
