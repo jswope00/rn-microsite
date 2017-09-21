@@ -28,7 +28,9 @@ get_header(); ?>
                 $stickyArgs = array( 
                   'posts_per_page' => get_option('posts_per_page'), 
                   'post__in'  => get_option( 'sticky_posts' ),
-                  'ignore_sticky_posts' => 1
+                  'ignore_sticky_posts' => 1,
+                  'category__in' => get_the_category()
+
                 );
                 $osetin_sticky = new WP_Query( $stickyArgs );
 
