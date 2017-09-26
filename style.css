@@ -298,6 +298,10 @@ display: none;
     text-decoration: none;
 }
 
+.dual-line img {
+    vertical-align: top;
+}
+
  @media screen and (max-width: 1250px) {
     .os-container-bottom {
     	display: none;

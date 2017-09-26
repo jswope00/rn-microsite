@@ -44,7 +44,11 @@
     <div class="fixed-header-w">
       <div class="menu-block">
         <div class="menu-inner-w">
-          <div class="logo">
+		   <?php if(is_category(array('gout-crystal','as','gca','psa'))){ ?>
+              <div class="logo dual-line">
+           <?php } else { ?>
+          	  <div class="logo">
+		   <?php } ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php if(get_field('logo_image', 'option')): ?>
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
@@ -113,8 +117,11 @@
     <?php if(get_current_menu_position() == "top"): ?>
       <?php if(get_current_menu_style() == 'v2'){ ?>
         <div class="menu-inner-w">
-          <div class="logo">
-<?php is_category('gout-crystal')?'echo "dual-line"':'nope'; ?>
+		   <?php if(is_category(array('gout-crystal','as','gca','psa'))){ ?>
+              <div class="logo dual-line">
+           <?php } else { ?>
+          	  <div class="logo">
+		   <?php } ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php if(get_field('logo_image', 'option')): ?>
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
