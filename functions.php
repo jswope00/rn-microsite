@@ -10,7 +10,7 @@ function pluto_child_enqueue_styles() {
 
 
 }
-
+wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/assets/js/custom.js', array ( 'jquery' ), 1.1, true);
 	  // Our custom post type function
 function create_posttype() {
 
@@ -110,4 +110,18 @@ function osetin_show_filter_bar_modified($post_id = false){
       echo '</div>';
     echo '</div>';
   }
+  add_filter('default_hidden_meta_boxes', 'show_hidden_meta_boxes', 10, 2);
+ 
+function show_hidden_meta_boxes($hidden, $screen) {
+    if ( 'post' == $screen->base ) {
+        foreach($hidden as $key=>$value) {
+            if ('postexcerpt' == $value) {
+                unset($hidden[$key]);
+                break;
+            }
+        }
+    }
+ 
+    return $hidden;
+}
 }

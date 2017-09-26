@@ -56,8 +56,13 @@
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
                     <?php if(is_category('gout-crystal')) { ?>
-                    <?php } elseif(is_category('psa-spa')) { ?>
-                    <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                    <br><h5>Expanded coverage of Gout sponsored by Horizon. All content chosen by RheumNow and faculty.</h5>
+                    <?php } elseif(is_category('as')) { ?>
+                    <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <?php } elseif(is_category('psa')) { ?>
+                    <br><h5>Expanded coverage of Biologics sponsorsed by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <?php } elseif(is_category('gca')) { ?>
+                    <br><h5>Expanded coverage of Biologics sponsorsed by TBD. All content chosen by RheumNow and faculty.</h5>
                     <?php } ?>
                   <?php } ?>
                 </div>
@@ -109,6 +114,7 @@
       <?php if(get_current_menu_style() == 'v2'){ ?>
         <div class="menu-inner-w">
           <div class="logo">
+<?php is_category('gout-crystal')?'echo "dual-line"':'nope'; ?>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
               <?php if(get_field('logo_image', 'option')): ?>
                 <img src="<?php the_field('logo_image', 'option'); ?>" alt="">
@@ -133,8 +139,13 @@
                       } 
                     ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
-                    <?php } elseif(is_category('psa-spa')) { ?>
-                    <?php } elseif(is_category('biologic-novel-rx')) { ?>
+                    <br><h5>Expanded coverage of Gout sponsored by Horizon. All content chosen by RheumNow and faculty.</h5>
+                    <?php } elseif(is_category('as')) { ?>
+                    <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <?php } elseif(is_category('psa')) { ?>
+                    <br><h5>Expanded coverage of Biologics sponsorsed by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <?php } elseif(is_category('gca')) { ?>
+                    <br><h5>Expanded coverage of Biologics sponsorsed by TBD. All content chosen by RheumNow and faculty.</h5>
                     <?php } ?>
                   <?php } ?>
                 </div>

@@ -19,7 +19,18 @@
             <div style="display:table;"><?php echo get_the_category_list(); ?></div>
           <?php endif; ?>
 	  <div>
-            <a class="read-more" href="<?php the_field( 'external_link' ); ?>" target="_blank"><span>Read More ></span></a>
+            <a class="read-more" href="<?php the_field( 'external_link' ); ?>#navbar" target="popup" onclick="window.open('<?php the_field( 'external_link' ); ?>#navbar','popup','width=600,height=600'); return false;"><span>Read More ></span></a>
+            <?php
+              if ( has_excerpt(get_the_ID()) ) { ?>
+                <div style="display: none;" class="custom-excerpt">
+                  <?php the_excerpt(); ?>
+                </div>
+              <?php
+              } else {
+
+              }
+            ?>
+            
           </div>
         </div>
       <?php } ?>

@@ -328,4 +328,15 @@ display: none;
     display:block !important;
 }
 }
+.custom-excerpt {
+    padding: 10px;
+    background: rgb(237, 237, 237);
+    border: 1px solid #428bca;
+}
+
+
+
+
+
+
 
