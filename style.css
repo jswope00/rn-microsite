@@ -12,6 +12,10 @@ Tags:
 Text Domain: pluto-by-osetin-child
 */
 
+.home .category-gout-advertisement {
+	display: none;
+}
+
 .post-content-tweet {
 	padding: 15px 15px 30px 15px;
 }
@@ -268,8 +272,9 @@ Text Domain: pluto-by-osetin-child
 }
 
 .category-gout-crystal .featured-items-header, 
-.category-psa-spa .featured-items-header, 
-.category-biologic-novel-rx .featured-items-header {
+.category-as .featured-items-header, 
+.category-psa .featured-items-header, 
+.category-gca .featured-items-header {
 display: none;
 }
 
@@ -298,7 +303,7 @@ display: none;
     text-decoration: none;
 }
 
-.dual-line img {
+.menu-block .dual-line a img {
     vertical-align: top;
 }
 

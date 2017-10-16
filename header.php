@@ -24,6 +24,7 @@
   <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
   <?php if(get_field("google_plus_authorship_url", "option")): ?>
     <link rel="author" href="<?php the_field('google_plus_authorship_url', 'option'); ?>">
   <?php endif; ?>
@@ -60,13 +61,13 @@
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
                     <?php if(is_category('gout-crystal')) { ?>
-                    <br><h5>Expanded coverage of Gout sponsored by Horizon. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded Gout coverage sponsored by Horizon; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('as')) { ?>
-                    <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded Ankylosing Spondylitis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('psa')) { ?>
-                    <br><h5>Expanded coverage of Biologics sponsorsed by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded Psoriatic Arthritis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('gca')) { ?>
-                    <br><h5>Expanded coverage of Biologics sponsorsed by TBD. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded GCA coverage sponsored by Genentech; All content chosen by RheumNow Faculty</h5>
                     <?php } ?>
                   <?php } ?>
                 </div>
@@ -77,13 +78,21 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="">
+				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma">
+                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="Horizon Pharma">
+				  </a>
                 <?php } elseif(is_category('as')) { ?>
-                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+				  <a href="https://www.novartis.com/" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+				  </a>
                 <?php } elseif(is_category('psa')) { ?>
-                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+				  <a href="https://www.novartis.com/" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+				  </a>
                 <?php } elseif(is_category('gca')) { ?>
-                  <img src="biologic" style="height: 60px;" alt="">
+				  <a href="https://www.gene.com/" alt="Genentech">
+                  	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Genentech.svg/640px-Genentech.svg.png" style="width: 150px;" alt="Genentech">
+				  </a>
                 <?php } else { ?>
                 <a href="https://www.lilly.com/" alt="Eli Lilly and Company">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
@@ -146,13 +155,13 @@
                       } 
                     ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
-                    <br><h5>Expanded coverage of Gout sponsored by Horizon. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded Gout coverage sponsored by Horizon; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('as')) { ?>
-                    <br><h5>Expanded coverage of Psoriatic Arthritis sponsored by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded Ankylosing Spondylitis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('psa')) { ?>
-                    <br><h5>Expanded coverage of Biologics sponsorsed by Celgene. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded Psoriatic Arthritis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('gca')) { ?>
-                    <br><h5>Expanded coverage of Biologics sponsorsed by TBD. All content chosen by RheumNow and faculty.</h5>
+                    <br><h5>Expanded GCA coverage sponsored by Genentech; All content chosen by RheumNow Faculty</h5>
                     <?php } ?>
                   <?php } ?>
                 </div>
@@ -163,13 +172,21 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="">
+				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma">
+                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="Horizon Pharma">
+				  </a>
                 <?php } elseif(is_category('as')) { ?>
-                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+				  <a href="https://www.novartis.com/" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+				  </a>
                 <?php } elseif(is_category('psa')) { ?>
-                  <img src="http://www.celgene.com/content/themes/celgene_2016/img/celgene-mobile-logo.png" style="height: 60px;" alt="">
+				  <a href="https://www.novartis.com/" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+				  </a>
                 <?php } elseif(is_category('gca')) { ?>
-                  <img src="biologic" style="height: 60px;" alt="">
+				  <a href="https://www.gene.com/" alt="Genentech">
+                  	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Genentech.svg/640px-Genentech.svg.png" style="width: 150px;" alt="Genentech">
+				  </a>
                 <?php } else { ?>
                 <a href="https://www.lilly.com/" alt="Eli Lilly and Company">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
@@ -279,7 +296,7 @@
 
         <ul class="dtr-col-list dtr-col-gap-30px dtr-col-4">
 	  <li>
-            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/pills_blue.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
           </li>
           <li>
             <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#"> Ankylosing Spondylitis </a></div>
