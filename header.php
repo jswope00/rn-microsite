@@ -294,7 +294,7 @@
       <span class="featured-items-title">FEATURED COVERAGE:</span>
       <div class="dtr-catboxes-wrapper clearfix">
 
-        <ul class="dtr-col-list dtr-col-gap-30px dtr-col-4">
+        <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3">
 	  <li>
             <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
           </li>
@@ -303,9 +303,6 @@
           </li>
           <li>
             <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#"> Psoriatic Arthritis </a></div>
-          </li>
-          <li>
-            <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/dna-163466_640.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gca' ) ); ?>" title="#"> GCA </a></div>
           </li>
         </ul>
       </div>
