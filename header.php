@@ -57,7 +57,7 @@
                 <?php if(get_field('logo_text', 'option')): ?>
                   <div class="logo_text">
                   <?php if (is_front_page()) { ?>
-                    <span><?php the_field('logo_text', 'option'); echo " - San Diego"; ?></span>
+                    <span><?php the_field('logo_text', 'option'); echo " - Amsterdam"; ?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
                     <?php if(is_category('gout-crystal')) { ?>
@@ -78,24 +78,24 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma">
+				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma" target="_blank">
                   <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="Horizon Pharma">
 				  </a>
                 <?php } elseif(is_category('as')) { ?>
-				  <a href="https://www.novartis.com/" alt="Novartis">
+				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
                   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('psa')) { ?>
-				  <a href="https://www.novartis.com/" alt="Novartis">
+				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
                   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('gca')) { ?>
-				  <a href="https://www.gene.com/" alt="Genentech">
+				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
                   	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Genentech.svg/640px-Genentech.svg.png" style="width: 150px;" alt="Genentech">
 				  </a>
                 <?php } else { ?>
-                <a href="https://www.lilly.com/" alt="Eli Lilly and Company">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
+                <a href="https://www.horizonpharma.com/" alt="Horizon Pharmaceuticals" target="_blank">
+                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="">
                 </a>
                 <?php } ?>
             </a>
@@ -138,7 +138,7 @@
               <?php if(get_field('logo_text', 'option')): ?>
                   <div class="logo_text">
                   <?php if (is_front_page()) { ?>
-                    <span><?php the_field('logo_text', 'option'); echo " - San Diego";?></span>
+                    <span><?php the_field('logo_text', 'option'); echo " - Amsterdam";?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": "); 
                       if (strcmp($current_url, DAY1URL) == 0) {
@@ -172,24 +172,24 @@
             <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
-				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma">
+				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma" target="_blank">
                   <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="Horizon Pharma">
 				  </a>
                 <?php } elseif(is_category('as')) { ?>
-				  <a href="https://www.novartis.com/" alt="Novartis">
+				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
                   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('psa')) { ?>
-				  <a href="https://www.novartis.com/" alt="Novartis">
+				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
                   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('gca')) { ?>
-				  <a href="https://www.gene.com/" alt="Genentech">
+				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
                   	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Genentech.svg/640px-Genentech.svg.png" style="width: 150px;" alt="Genentech">
 				  </a>
                 <?php } else { ?>
-                <a href="https://www.lilly.com/" alt="Eli Lilly and Company">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
+                <a href="https://www.horizonpharma.com/" alt="Horizon Pharmaceuticals" target="_blank">
+                  <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="">
                 </a>
                 <?php } ?>
             </a>
@@ -296,13 +296,13 @@
 
         <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3">
 	  <li>
-            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#"> Ankylosing Spondylitis </a></div>
+            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#"> Ankylosing Spondylitis </a></div>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(http://www.scrap.johnswope.com/rnmicrosite/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#"> Psoriatic Arthritis </a></div>
+            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#"> Psoriatic Arthritis </a></div>
           </li>
         </ul>
       </div>

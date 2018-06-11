@@ -2,7 +2,9 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class('pluto-post-box'); ?>>
     <div class="post-body">
       <?php osetin_top_social_share_index(); ?>
-      <?php osetin_get_media_content(); ?>
+	  <?php if('tweet' != get_post_type() ): ?>
+      	<?php osetin_get_media_content(); ?>
+	  <?php endif; ?>
 
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
 	    <?php if('tweet' == get_post_type() ){ ?>
