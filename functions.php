@@ -108,6 +108,7 @@ function osetin_show_filter_bar_modified($post_id = false){
               echo '<a href="'. DAY3URL .'"><button class="index-filter-option">Day 3</button></a>';
               echo '<a href="'. DAY4URL .'"><button class="index-filter-option">Day 4</button></a>';
           echo '</div>';
+		  echo '<div class="index-filter-sub-label index-filter-sub-label-about"><a href="/about-us">About this Site</a></div>';
           if(osetin_get_field('hide_clear_filters_button', $post_id) != true){
             echo '<div class="index-clear-filter-w inactive">';
               echo '<button class="index-clear-filter-btn"><i class="os-icon os-icon-thin-delete-circle"></i> <span>'.esc_html__('Clear Filters', 'pluto').'</span></button>';

@@ -46,6 +46,7 @@ Text Domain: pluto-by-osetin-child
     margin-right: 30px;
     display: inline-block;
     vertical-align: middle;
+	border-right: 1px solid rgba(0,0,0,.1);
 }
 
 .index-filter-days .index-filter-option {
@@ -135,7 +136,7 @@ Text Domain: pluto-by-osetin-child
 }
 
 .dtr-catbox, .dtr-catbox:hover .dtr-catbox-link {
-    color: #3276b1;
+    color: #3c5b68;
 }
 
 .dtr-catbox {
@@ -181,7 +182,7 @@ Text Domain: pluto-by-osetin-child
 }
 
 .dtr-catbox-link, .dtr-meta-category a, .wp-caption figcaption {
-    color: #428bca;
+    color: #3c5b68;
 }
 
 .dtr-catbox-link {
