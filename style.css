@@ -12,6 +12,9 @@ Tags:
 Text Domain: acr18-pluto-by-osetin-child
 */
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
 .home .category-gout-advertisement {
 	display: none;
 }
@@ -148,7 +151,7 @@ Text Domain: acr18-pluto-by-osetin-child
     text-align: center;
     width: 100%;
     background-size: cover;
-    height: 200px;
+    height: 250px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 1px;
     overflow: hidden;
     padding: 0px;
@@ -158,12 +161,16 @@ Text Domain: acr18-pluto-by-osetin-child
     border-style: solid;
     border-color: rgb(255, 255, 255);
     border-image: initial;
+    transition: .2s all;
 }
 
 
 
 .dtr-catbox:hover .dtr-catbox-link {
-	background-color: #428bca;
+    background-color: #428bca;
+    transition: .2s all;
+
+
 }
 
 .dtr-catbox:hover .dtr-catbox-link {
@@ -171,9 +178,12 @@ Text Domain: acr18-pluto-by-osetin-child
 }
 
 .dtr-catbox-link {
-    font-family: 'Oswald';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 500;
+    font-size: 1rem !important;
+    bottom: 0 !important;
+    letter-spacing: 1px;
     background: #eee;
 }
 
@@ -203,7 +213,7 @@ Text Domain: acr18-pluto-by-osetin-child
 }
 
 .dtr-catbox1 .dtr-catbox-link {
-    background-color: #FFD043;
+    background-color: #87ceeb;
 }
 
 .dtr-catbox2 .dtr-catbox-link {
@@ -265,15 +275,15 @@ Text Domain: acr18-pluto-by-osetin-child
     background-color: #D4E9B9 !important;
 }
 
-.category-gout-crystal .featured-items-header, 
-.category-as .featured-items-header, 
-.category-psa .featured-items-header, 
+.category-gout-crystal .featured-items-header,
+.category-as .featured-items-header,
+.category-psa .featured-items-header,
 .category-gca .featured-items-header {
 display: none;
 }
 
 .load-more-posts-button-w {
-    padding-top: 150px; // bit of a hack to prevent tweets from overlapping this. 
+    padding-top: 150px;
 }
 
 .index-sort-views {
@@ -337,9 +347,61 @@ display: none;
     border: 1px solid #428bca;
 }
 
+.sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+    .sponsors li{
+        height: 200px;
+        width: 50% !important;
+    }
+    .dtr-catbox {
+        height: 100%;
+        background-size: cover;
+    }
+
+    .sponsors {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+    .dtr-catbox-link {
+        padding: 5px 10px;
+    }
+    .sponsors .main-sponsor {
+        width: 100% !important;
+    }
+}
+
+
+.sponsors li{
+    width: 17%;
+}
+
+.sponsors .main-sponsor {
+    width: 30%;
+}
 
 
 
 
+.main-sponsor .dtr-catbox1 .dtr-catbox-link {
+    font-size: 1.5rem !important;
+}
 
 
+
+/* DONT UPLOAD */
+.menu-position-left .menu-block {
+    display: none !important;
+}
+
+.index-isotope.v3.isotope-simple article.pluto-post-box .meta-share, .index-isotope.v3.isotope-simple article.pluto-post-box .meta-like, .index-isotope.v3.isotope-simple article.pluto-post-box.format-image .meta-share, .index-isotope.v3.isotope-simple article.pluto-post-box.format-image .meta-like {
+    padding: 15px 15px 15px 15px;
+}

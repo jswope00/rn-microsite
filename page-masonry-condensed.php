@@ -28,7 +28,7 @@ get_header(); ?>
         </div>
       </div>
     </div>
-          
+
 <div class="main-content-m">
   <?php os_the_primary_sidebar('left', true); ?>
   <div class="main-content-i">
@@ -42,21 +42,34 @@ get_header(); ?>
         $os_current_box_counter = 1; $os_ad_block_counter = 0;
 
 
-        $stickyArgs = array( 
-          'posts_per_page' => get_option('posts_per_page'), 
+        $stickyArgs = array(
+          'posts_per_page' => get_option('posts_per_page'),
           'post__in'  => get_option( 'sticky_posts' ),
-          'ignore_sticky_posts' => 1
+          'ignore_sticky_posts' => 1,
+
         );
         $osetin_sticky = new WP_Query( $stickyArgs );
 
+
+        $args = array(
+          'paged' => $paged,
+          'posts_per_page' => get_option('posts_per_page'),
+          'post_status' => 'publish',
+          'post_type' => array('post', 'tweet', 'live_video')
+
+        );
+
+        $osetin_query = new WP_Query( $args );
+
         while ($osetin_sticky->have_posts()) : $osetin_sticky->the_post(); ?>
-           <?php get_template_part( 'v3-content', get_post_format() ); ?>
+        $
+           <?php get_template_part( 'v4-content', get_post_format() ); ?>
         <?php endwhile; ?>
 
 
         <?php
         if ( $osetin_query->have_posts() ) : while ( $osetin_query->have_posts() ) : $osetin_query->the_post(); ?>
-          <?php get_template_part( 'v3-content', get_post_format() ); ?>
+          <?php get_template_part( 'v4-content', get_post_format() ); ?>
           <?php os_ad_between_posts(); ?>
         <?php endwhile; endif; ?>
 

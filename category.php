@@ -26,18 +26,18 @@ get_header(); ?>
 
               <?php
                 $catID = get_query_var( 'cat' );
-                $stickyArgs = array( 
-                  'posts_per_page' => get_option('posts_per_page'), 
+                $stickyArgs = array(
+                  'posts_per_page' => get_option('posts_per_page'),
                   'post__in'  => get_option( 'sticky_posts' ),
                   'ignore_sticky_posts' => 1,
-                  'category__in' => $catID 
+                  'category__in' => $catID
 
                 );
                 $osetin_sticky = new WP_Query( $stickyArgs );
 
                 while ($osetin_sticky->have_posts()) : $osetin_sticky->the_post(); ?>
                   <?php get_template_part( 'v3-content', get_post_format() ); ?>
-                <?php endwhile; 
+                <?php endwhile;
 
               if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                    <?php get_template_part( 'v3-content', get_post_format() ); ?>

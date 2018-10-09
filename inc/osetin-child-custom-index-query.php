@@ -5,21 +5,19 @@ if(get_query_var('page')){
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 }
 
-$args = array( 
-	'paged' => $paged, 
-	'posts_per_page' => get_option('posts_per_page'), 
-	'post_status' => 'publish', 
-	'category__in' => get_field('show_only_these_categories'),
-	'post__not_in'=> get_option( 'sticky_posts' )
+$args = array(
+	'paged' => $paged,
+	'posts_per_page' => get_option('posts_per_page'),
+	'post_status' => 'publish'
 );
 
-$archiveQuery = array( 
-	'posts_per_page' => get_option('posts_per_page'), 
+$archiveQuery = array(
+	'posts_per_page' => get_option('posts_per_page'),
 );
 
-$stickyArgs = array( 
+$stickyArgs = array(
 	'paged'
-	'posts_per_page' => get_option('posts_per_page'), 
+	'posts_per_page' => get_option('posts_per_page'),
 	'post__in'  => get_option( 'sticky_posts' ),
 	'ignore_sticky_posts' => 1
 );

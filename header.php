@@ -140,19 +140,19 @@
                   <?php if (is_front_page()) { ?>
                     <span><?php the_field('logo_text', 'option'); echo " - San Diego";?></span>
                   <?php } else { ?>
-                    <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": "); 
+                    <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");
                       if (strcmp($current_url, DAY1URL) == 0) {
                         echo ": Day 1";
-                      } 
+                      }
                       if (strcmp($current_url, DAY2URL) == 0) {
                         echo ": Day 2";
-                      } 
+                      }
                       if (strcmp($current_url, DAY3URL) == 0) {
                         echo ": Day 3";
                       }
                       if (strcmp($current_url, DAY4URL) == 0) {
                         echo ": Day 4";
-                      } 
+                      }
                     ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
                     <br><h5>Expanded Gout coverage sponsored by Horizon; All content chosen by RheumNow Faculty</h5>
@@ -294,15 +294,32 @@
       <span class="featured-items-title">FEATURED COVERAGE:</span>
       <div class="dtr-catboxes-wrapper clearfix">
 
-        <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3">
-	  <li>
-            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#"> Gout </a></div>
+        <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3 sponsors">
+	        <li class="main-sponsor">
+            <a  href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>">
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://acr18.rheumnow.com/wp-content/uploads/sites/5/2018/10/handcropped.RA_.jpg)">
+                <span class="dtr-catbox-link" title="#"> Rheumatoid Arthritis
+              </span>
+            </div>
+            </a>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(/wp-content/uploads/2017/08/spine.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#"> Ankylosing Spondylitis </a></div>
+          <a href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#">
+            <div class="dtr-catbox dtr-catbox2 clearfix" style="background-image: url(/wp-content/uploads/2017/08/spine.jpg)"> <span class="dtr-catbox-link" title="#"> Ankylosing Spondylitis </span></div>
+            </a>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#"> Psoriatic Arthritis </a></div>
+            <a  href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#">
+              <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <span style="background: #FFD043;" class="dtr-catbox-link"  title="#"> Gout</span></div>
+            </a>
+          </li>
+          <li>
+            <a  href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#">
+              <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <span class="dtr-catbox-link"  title="#"> Psoriatic Arthritis </span></div>
+            </a>
+          </li>
+          <li>
+            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a style="background: #7CFC00;" class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#"> TBD </a></div>
           </li>
         </ul>
       </div>
