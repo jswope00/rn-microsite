@@ -57,17 +57,17 @@
                 <?php if(get_field('logo_text', 'option')): ?>
                   <div class="logo_text">
                   <?php if (is_front_page()) { ?>
-                    <span><?php the_field('logo_text', 'option'); echo " - San Diego"; ?></span>
+                    <span><?php the_field('logo_text', 'option'); echo " - Chicago"; ?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");?></span>
                     <?php if(is_category('gout-crystal')) { ?>
                     <br><h5>Expanded Gout coverage sponsored by Horizon; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('as')) { ?>
-                    <br><h5>Expanded Ankylosing Spondylitis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
+                    <br><h5>Expanded Ankylosing Spondylitis coverage sponsored by Novartis2; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('psa')) { ?>
                     <br><h5>Expanded Psoriatic Arthritis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
-                    <?php } elseif(is_category('gca')) { ?>
-                    <br><h5>Expanded GCA coverage sponsored by Genentech; All content chosen by RheumNow Faculty</h5>
+                    <?php } elseif(is_category('ra-inflammatory-arthritis')) { ?>
+                    <br><h5>Expanded Rheumatoid Arthritis coverage sponsored by Lilly; All content chosen by RheumNow Faculty</h5>
                     <?php } ?>
                   <?php } ?>
                 </div>
@@ -75,7 +75,6 @@
             </a>
           </div>
           <div class="sponsor">
-            <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
 				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma" target="_blank">
@@ -83,11 +82,11 @@
 				  </a>
                 <?php } elseif(is_category('as')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('psa')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('gca')) { ?>
 				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
@@ -98,7 +97,6 @@
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
                 </a>
                 <?php } ?>
-            </a>
           </div>
           <!--Hide main menu..
           <div class="menu-activated-on-hover menu-w">
@@ -138,30 +136,30 @@
               <?php if(get_field('logo_text', 'option')): ?>
                   <div class="logo_text">
                   <?php if (is_front_page()) { ?>
-                    <span><?php the_field('logo_text', 'option'); echo " - San Diego";?></span>
+                    <span><?php the_field('logo_text', 'option'); echo " - Chicago";?></span>
                   <?php } else { ?>
                     <span><?php the_field('logo_text', 'option'); single_cat_title($prefix=": ");
-                      if (strcmp($current_url, DAY1URL) == 0) {
+                      if (strcmp($current_url, ACR18_DAY1URL) == 0) {
                         echo ": Day 1";
                       }
-                      if (strcmp($current_url, DAY2URL) == 0) {
+                      if (strcmp($current_url, ACR18_DAY2URL) == 0) {
                         echo ": Day 2";
                       }
-                      if (strcmp($current_url, DAY3URL) == 0) {
+                      if (strcmp($current_url, ACR18_DAY3URL) == 0) {
                         echo ": Day 3";
                       }
-                      if (strcmp($current_url, DAY4URL) == 0) {
+                      if (strcmp($current_url, ACR18_DAY4URL) == 0) {
                         echo ": Day 4";
                       }
                     ?></span>
                     <?php if(is_category('gout-crystal')) { ?>
                     <br><h5>Expanded Gout coverage sponsored by Horizon; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('as')) { ?>
-                    <br><h5>Expanded Ankylosing Spondylitis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
+                    <br><h5>Expanded Ankylosing Spondylitis coverage sponsored by Novartis2; All content chosen by RheumNow Faculty</h5>
                     <?php } elseif(is_category('psa')) { ?>
                     <br><h5>Expanded Psoriatic Arthritis coverage sponsored by Novartis; All content chosen by RheumNow Faculty</h5>
-                    <?php } elseif(is_category('gca')) { ?>
-                    <br><h5>Expanded GCA coverage sponsored by Genentech; All content chosen by RheumNow Faculty</h5>
+		    <?php } elseif(is_category('ra-inflammatory-arthritis')) { ?>
+                    <br><h5>Expanded Rheumatoid Arthritis coverage sponsored by Lilly; All content chosen by RheumNow Faculty</h5>
                     <?php } ?>
                   <?php } ?>
                 </div>
@@ -169,7 +167,6 @@
             </a>
           </div>
           <div class="sponsor">
-            <a href="https://www.google.com">
               <span>Sponsored by: </span>
                 <?php if(is_category('gout-crystal')) { ?>
 				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma" target="_blank">
@@ -177,11 +174,11 @@
 				  </a>
                 <?php } elseif(is_category('as')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('psa')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Novartis.svg/640px-Novartis.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('gca')) { ?>
 				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
@@ -192,7 +189,6 @@
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
                 </a>
                 <?php } ?>
-            </a>
           </div>
           <!--Hide main menu..
           <div class="menu-activated-on-hover menu-w">
@@ -296,7 +292,7 @@
 
         <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3 sponsors">
 	        <li class="main-sponsor">
-            <a  href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>">
+            <a  href="<?php echo esc_url( home_url( '/category/ra-inflammatory-arthritis' ) ); ?>">
             <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://acr18.rheumnow.com/wp-content/uploads/sites/5/2018/10/handcropped.RA_.jpg)">
                 <span class="dtr-catbox-link" title="#"> Rheumatoid Arthritis
               </span>
@@ -309,18 +305,20 @@
             </a>
           </li>
           <li>
-            <a  href="<?php echo esc_url( home_url( '/category/as' ) ); ?>" title="#">
-              <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <span style="background: #FFD043;" class="dtr-catbox-link"  title="#"> Gout</span></div>
+            <a  href="<?php echo esc_url( home_url( '/category/gout-crystal' ) ); ?>" title="#">
+              <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/10/gout.erosivehand-1.jpg)"> <span class="dtr-catbox-link"  title="#"> Gout</span></div>
             </a>
           </li>
           <li>
             <a  href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#">
-              <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <span class="dtr-catbox-link"  title="#"> Psoriatic Arthritis </span></div>
+              <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <span class="dtr-catbox-link"  title="#"> Psoriatic Arthritis </span></div>
             </a>
           </li>
           <li>
-            <div class="dtr-catbox dtr-catbox3 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <a style="background: #7CFC00;" class="dtr-catbox-link" href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#"> TBD </a></div>
-          </li>
+	   <a href="<?php echo esc_url( home_url( '/category/osteoperosis') ); ?>" title="#">
+            <div class="dtr-catbox dtr-catbox5 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)">_<span class="dtr-catbox-link" title="#"> Osteoperosis </span></div>
+           </a>
+	  </li>
         </ul>
       </div>
     </div>

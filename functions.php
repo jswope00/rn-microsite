@@ -228,10 +228,10 @@ function osetin_show_filter_bar_modified($post_id = false){
           }
           echo '<div class="index-filter-sub-label">'.esc_html__('Day', 'pluto').'</div>';
           echo '<div class="index-filter-days">';
-              echo '<a href="'. DAY1URL .'"><button class="index-filter-option">Day 1</button></a>';
-              echo '<a href="'. DAY2URL .'"><button class="index-filter-option">Day 2</button></a>';
-              echo '<a href="'. DAY3URL .'"><button class="index-filter-option">Day 3</button></a>';
-              echo '<a href="'. DAY4URL .'"><button class="index-filter-option">Day 4</button></a>';
+              echo '<a href="'. ACR18_DAY1URL .'"><button class="index-filter-option">Day 1</button></a>';
+              echo '<a href="'. ACR18_DAY2URL .'"><button class="index-filter-option">Day 2</button></a>';
+              echo '<a href="'. ACR18_DAY3URL .'"><button class="index-filter-option">Day 3</button></a>';
+              echo '<a href="'. ACR18_DAY4URL .'"><button class="index-filter-option">Day 4</button></a>';
           echo '</div>';
 		  echo '<div class="index-filter-sub-label index-filter-sub-label-about"><a href="/about-us">About this Site</a></div>';
           if(osetin_get_field('hide_clear_filters_button', $post_id) != true){
