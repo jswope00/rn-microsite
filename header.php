@@ -293,7 +293,7 @@
         <ul class="dtr-col-list dtr-col-gap-30px dtr-col-3 sponsors">
 	        <li class="main-sponsor">
             <a  href="<?php echo esc_url( home_url( '/category/rheumatoid-arthritis' ) ); ?>">
-            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(http://acr18.rheumnow.com/wp-content/uploads/sites/5/2018/10/handcropped.RA_.jpg)">
+            <div class="dtr-catbox dtr-catbox1 clearfix" style="background-image: url(/wp-content/uploads/sites/5/2018/10/arthritis.RA_.Xray_.hands_.jpg)">
                 <span class="dtr-catbox-link" title="#"> Rheumatoid Arthritis
               </span>
             </div>
@@ -311,12 +311,12 @@
           </li>
           <li>
             <a  href="<?php echo esc_url( home_url( '/category/psa' ) ); ?>" title="#">
-              <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)"> <span class="dtr-catbox-link"  title="#"> Psoriatic Arthritis </span></div>
+              <div class="dtr-catbox dtr-catbox4 clearfix" style="background-image: url(/wp-content/uploads/sites/5/2018/10/PsA.png)"> <span class="dtr-catbox-link"  title="#"> Psoriatic Arthritis </span></div>
             </a>
           </li>
           <li>
 	   <a href="<?php echo esc_url( home_url( '/category/osteoporosis') ); ?>" title="#">
-            <div class="dtr-catbox dtr-catbox5 clearfix" style="background-image: url(/wp-content/uploads/2017/08/knee-1406964_1280.jpg)">_<span class="dtr-catbox-link" title="#"> Osteoporosis </span></div>
+            <div class="dtr-catbox dtr-catbox5 clearfix" style="background-image: url(/wp-content/uploads/sites/5/2018/10/Osteoporosis.hip_.jpg)">_<span class="dtr-catbox-link" title="#"> Osteoporosis </span></div>
            </a>
 	  </li>
         </ul>

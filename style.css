@@ -180,8 +180,8 @@ Text Domain: acr18-pluto-by-osetin-child
 .dtr-catbox-link {
     font-family: 'Lato', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 1rem !important;
+    font-weight: bold;
+    font-size: 1.2rem !important;
     bottom: 0 !important;
     letter-spacing: 1px;
     background: #eee;
