@@ -434,8 +434,8 @@ display: none;
 /* AUDIO PLAYING */
 .avatar-audio {
     position: absolute;
-    top: -1.5rem;
-    right: -1.5rem;
+    top: -2.5rem;
+    right: -2.5rem;
     /* background: #3498db; */
     width: 5rem;
     height: 5rem;

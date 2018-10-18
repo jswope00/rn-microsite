@@ -9,34 +9,31 @@
 
         <!-- :: AUDIO PLAYING LOGIC START :: -->
           <?php
-
-
             $tempAuthor = get_field('audio_author');
             $author = wp_get_current_user();
-            $fileString =  get_the_ID() . '+';
-            $files = glob(ABSPATH . 'sounds/' . $fileString . '*.mp3');
+            $fileString =  get_the_ID() . '|';
+            $files = glob(ABSPATH . 'sounds' . $fileString . '*.*');
             if(count($files) > 0) {
               usort($files, function($a,$b){
                 return filemtime($b) - filemtime($a);
               });
               $audioExists = true;
-              $audioSrc = get_site_url() . '/sounds/' . basename($files[0]);
-              $email = get_string_between(basename($audioSrc), '+', '+');
+              $audioSrc = get_site_url() . '/' . basename($files[0]);
+              $email = get_string_between(basename($audioSrc), '|', '|');
             };
             if(!$audioSrc) {
               $audioSrc = get_field('audio');
               $email = get_field('audio_author')['user_email'];
             }
 
-            $avatar =  get_avatar($email);
-            $avatar = get_string_between($avatar, 'src="', '"');
+
             ?>
          <?php
          if($audioSrc) {
           $tempAuthor = get_field('audio_author');
           ?>
           <div class="audio" id="audio" data-id="<?php echo the_ID(); ?>" data-audio="<?php echo $audioSrc; ?>">
-            <div class="avatar-audio" style="background-image: url('<?php echo $avatar; ?>')">
+            <div class="avatar-audio" style="background-image: url('<?php echo get_avatar_url($email, array('size' => 450)); ?>')">
               <i class='fa fa-play'></i>
             </div>
               <div class="d-none">
