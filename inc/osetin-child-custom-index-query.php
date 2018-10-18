@@ -15,6 +15,8 @@ $args = array(
 
 $archiveQuery = array(
 	'posts_per_page' => get_option('posts_per_page'),
+	'post_type' => array('post', 'tweet', 'live_video')
+
 );
 
 $stickyArgs = array(

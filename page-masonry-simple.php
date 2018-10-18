@@ -50,7 +50,7 @@ get_header(); ?>
         );
         $osetin_query = new WP_Query( $args );
         while ($osetin_query->have_posts()) : $osetin_query->the_post(); ?>
-            <?php get_template_part( 'v4-content', get_post_format() ); ?>
+            <?php get_template_part( 'v3-content', get_post_format() ); ?>
             <?php os_ad_between_posts(); ?>
         <?php endwhile; ?>
 

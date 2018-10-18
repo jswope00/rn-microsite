@@ -5,6 +5,16 @@
       <?php get_manual_content(); ?>
 
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
+        <?php if('tweet' == get_post_type() ){ ?>
+        <div class="post-content-tweet">
+            <?php the_content(); ?>
+            <?php if(os_is_post_element_active('category')): ?>
+              <div class="category-list">
+                <?php if('uncategorized' != get_the_category_list()) echo get_the_category_list(); ?>
+              </div>
+            <?php endif; ?>
+          </div>
+      <?php }else{ ?>
         <div class="post-content-body">
 
         <!-- :: AUDIO PLAYING LOGIC START :: -->
@@ -25,7 +35,7 @@
             };
             if(!$audioSrc) {
               $audioSrc = get_field('audio');
-              $email = get_field('audio_author')['user_email'];
+              $email = get_field('audio_author') ? get_field('audio_author')['user_email'] : '';
             }
 
             $avatar =  get_avatar($email);
@@ -85,6 +95,7 @@
         </div>
       <?php } ?>
     </div>
+            <?php }?>
     <?php if(os_is_post_element_active('date') || os_is_post_element_active('author') || os_is_post_element_active('like') || os_is_post_element_active('view_count')): ?>
       <div class="post-meta entry-meta">
 

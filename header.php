@@ -82,11 +82,11 @@
 				  </a>
                 <?php } elseif(is_category('as')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="/wp-content/uploads/sites/5/2018/10/novartis_logo_pos_rgb.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('psa')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="/wp-content/uploads/sites/5/2018/10/novartis_logo_pos_rgb.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('gca')) { ?>
 				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
@@ -174,11 +174,11 @@
 				  </a>
                 <?php } elseif(is_category('as')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="/wp-content/uploads/sites/5/2018/10/novartis_logo_pos_rgb.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('psa')) { ?>
 				  <a href="https://www.novartis.com/" alt="Novartis" target="_blank">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Novartis-Logo.svg/2000px-Novartis-Logo.svg.png" style="width: 150px;" alt="Novartis">
+                  <img src="/wp-content/uploads/sites/5/2018/10/novartis_logo_pos_rgb.png" style="width: 150px;" alt="Novartis">
 				  </a>
                 <?php } elseif(is_category('gca')) { ?>
 				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">

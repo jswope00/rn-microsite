@@ -105,8 +105,8 @@
 
     // :: READ MORE FEATURE ::
     $( ".read-more" ).hover( function() {
-    	$(this).parents('.format-link').css('z-index', 999);
-    	$( this ).next().slideToggle( "slow" );
+      $(this).parents('.format-link').css('z-index', 999);
+      $( this ).next().slideToggle( "slow" );
     });
     // :: END OF READ MORE FEATURE ::
 
@@ -123,8 +123,14 @@
 
     var audioPlaying = false;
 
-    $('.audio').click(function() {
-      let id = $(this).data('id');
+$(document).on('click','.audio', function(){
+        var id = $(this).data('id');
+
+      $('.audio').each( function( index, el ) {
+        if(!arrayOfAudioObjects[$(this).data('id')])  {
+          arrayOfAudioObjects[$(this).data('id')] = new Audio($(this).data('audio'));
+        }
+      });
       arrayOfAudioObjects.forEach((item, index) => {
         if(index != id) {
           $('.audio').each( function( index, el ) {
@@ -133,7 +139,6 @@
           arrayOfAudioObjects[index].pause();
         }
       });
-
       if(arrayOfAudioObjects[id].paused) {
         $(this).find(">:first-child").html("<i class='fa fa-pause'></i>")
         arrayOfAudioObjects[id].play();
@@ -143,9 +148,8 @@
       }
     });
 
-
-    $('.record').click(function() {
-      let id = $(this).data('id');
+$(document).on('click','.record', function(){
+       let id = $(this).data('id');
       let user = $(this).data('user');
       // $(this).find('.record-audio:first').css('background-color', '#ff0000');
       recordStop(id, user, $(this));
@@ -153,8 +157,11 @@
       // setInterval(function(){
         // recordStop(id, user, $(this));
         // );
+});
+    // $('.record').click(function() {
 
-    });
+
+    // });
 
   } );
 } )( jQuery );

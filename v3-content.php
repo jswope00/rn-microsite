@@ -3,12 +3,79 @@
     <div class="post-body">
       <?php osetin_top_social_share_index(); ?>
 	  <?php if('tweet' != get_post_type() ): ?>
-      	<?php osetin_get_media_content(); ?>
+      	<?php  osetin_get_media_content(); ?>
 	  <?php endif; ?>
 
       <?php if(os_is_post_element_active('title') || os_is_post_element_active('category') || os_is_post_element_active('excerpt')){ ?>
 	    <?php if('tweet' == get_post_type() ){ ?>
 	    	<div class="post-content-tweet">
+              <!-- :: AUDIO PLAYING LOGIC START :: -->
+          <?php
+
+            $tempAuthor = get_field('audio_author');
+            $author = wp_get_current_user();
+            $fileString =  get_the_ID() . '+';
+            $files = glob(ABSPATH . 'sounds/' . $fileString . '*.mp3');
+
+            if(count($files) > 0) {
+              usort($files, function($a,$b){
+                return filemtime($b) - filemtime($a);
+              });
+
+              $audioExists = true;
+              $audioSrc = get_site_url() . '/sounds/' . basename($files[0]);
+              $email = get_string_between(basename($audioSrc), '+', '+');
+
+
+            };
+            if(!isset($audioSrc)) {
+              $audioSrc = get_field('audio');
+              $email = get_field('audio_author') ? get_field('audio_author')['user_email'] : '';
+            }
+
+            $user =  get_avatar($email);
+            if(isset($audioSrc)) {
+              // $avatar = get_url_avatar($user);
+              $doc = new DOMDocument();
+              $doc->loadHTML($user);
+              $imageTags = $doc->getElementsByTagName('img');
+
+              foreach($imageTags as $tag) {
+                  $avatar = $tag->getAttribute('src');
+              }
+            }
+
+            ?>
+         <?php
+         if($audioSrc) {
+          $tempAuthor = get_field('audio_author');
+          ?>
+          <div class="audio" id="audio" data-id="<?php echo the_ID(); ?>" data-audio="<?php echo $audioSrc; ?>">
+            <div class="avatar-audio" style="background-image: url('<?php echo $avatar; ?>')">
+              <i class='fa fa-play'></i>
+            </div>
+              <div class="d-none">
+                <?php echo get_field('audio'); ?>
+              </div>
+            </div>
+            <?php } ?>
+          <!-- :: AUDIO PLAYING LOGIC START :: -->
+                       <!-- :: AUDIO RECORDING LOGIC START :: -->
+           <?php if(is_user_logged_in()){ ?>
+
+            <div class="record" id="record" data-id="<?php echo the_ID(); ?>" data-user="<?php echo $author->user_email ?>"  data-audio="<?php echo get_field('audio'); ?>">
+              <div class="record-audio">
+                <i class='fa fa-microphone'></i>
+              </div>
+              <div class="d-none">
+                <?php echo get_field('audio'); ?>
+              </div>
+            </div>
+            <form id="test-form" action="">
+              <input type="hidden" id="input-test" name="input-test" value="<?php the_field('downloaded'); ?>">
+            </form>
+         <?php } ?>
+          <!-- :: AUDIO RECORDING LOGIC START :: -->
 	      		<?php the_content(); ?>
             <?php if(os_is_post_element_active('category')): ?>
               <div class="category-list">
@@ -18,22 +85,71 @@
 	      	</div>
 	    <?php }else{ ?>
         	<div class="post-content-body">
-            <!-- :: AUDIO LOGIC START :: -->
-        <?php if(get_field('audio')) { ?>
+
+        <!-- :: AUDIO PLAYING LOGIC START :: -->
           <?php
-            var_dump(get_field('audio_author'));
-            die();
+
+            $tempAuthor = get_field('audio_author');
+            $author = wp_get_current_user();
+            $fileString =  get_the_ID() . '+';
+            $files = glob(ABSPATH . 'sounds/' . $fileString . '*.mp3');
+            if(count($files) > 0) {
+              usort($files, function($a,$b){
+                return filemtime($b) - filemtime($a);
+              });
+              $audioExists = true;
+              $audioSrc = get_site_url() . '/sounds/' . basename($files[0]);
+              $email = get_string_between(basename($audioSrc), '+', '+');
+            };
+            if(!isset($audioSrc)) {
+              $audioSrc = get_field('audio');
+              $email = get_field('audio_author') ? get_field('audio_author')['user_email'] : '';
+            }
+
+            $user =  get_avatar($email);
+            if(isset($audioSrc)) {
+              // $avatar = get_url_avatar($user);
+              $doc = new DOMDocument();
+              $doc->loadHTML($user);
+              $imageTags = $doc->getElementsByTagName('img');
+
+              foreach($imageTags as $tag) {
+                  $avatar = $tag->getAttribute('src');
+              }
+            }
+
+            ?>
+         <?php
+         if($audioSrc) {
+          $tempAuthor = get_field('audio_author');
           ?>
-          <div class="audio" id="audio" data-id="<?php echo the_ID(); ?>"  data-audio="<?php echo get_field('audio'); ?>">
-            <div class="avatar-audio" style="background-image: url('<?php echo get_avatar_url(get_the_author_meta( 'ID' ), array('size' => 450)); ?>')">
+          <div class="audio" id="audio" data-id="<?php echo the_ID(); ?>" data-audio="<?php echo $audioSrc; ?>">
+            <div class="avatar-audio" style="background-image: url('<?php echo $avatar; ?>')">
               <i class='fa fa-play'></i>
             </div>
               <div class="d-none">
                 <?php echo get_field('audio'); ?>
               </div>
             </div>
-        <?php }?>
-          <!-- :: AUDIO LOGIC START :: -->
+            <?php } ?>
+          <!-- :: AUDIO PLAYING LOGIC START :: -->
+                       <!-- :: AUDIO RECORDING LOGIC START :: -->
+           <?php if(is_user_logged_in()){ ?>
+
+            <div class="record" id="record" data-id="<?php echo the_ID(); ?>" data-user="<?php echo $author->user_email ?>"  data-audio="<?php echo get_field('audio'); ?>">
+              <div class="record-audio">
+                <i class='fa fa-microphone'></i>
+              </div>
+              <div class="d-none">
+                <?php echo get_field('audio'); ?>
+              </div>
+            </div>
+            <form id="test-form" action="">
+              <input type="hidden" id="input-test" name="input-test" value="<?php the_field('downloaded'); ?>">
+            </form>
+         <?php } ?>
+          <!-- :: AUDIO RECORDING LOGIC START :: -->
+
 	            <?php if(os_is_post_element_active('title')): ?>
                 <?php if('video' != get_post_format() ) { ?>
 	                <h4 class="post-title entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h4>

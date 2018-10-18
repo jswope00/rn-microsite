@@ -13,58 +13,16 @@ function enqueue_load_fa() {
     wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 
 }
-function my_acf_update_value( $value, $post_id, $field  ) {
-  // only do it to certain custom fields
-  die();
-  if( $field['name'] == 'audio' ) {
-    die();
-      // get the old (saved) value
-      // $old_value = get_field('custom_field_name', $post_id);
 
-      // // get the new (posted) value
-      // $new_value = $_POST['acf']['field_1234567890abc'];
 
-      // // check if the old value is the same as the new value
-      // if( $old_value != $new_value ) {
-      //     // Do something if they are different
-      // } else {
-      //     // Do something if they are the same
-      // }
-  }
-
-// don't forget to return to be saved in the database
-  return $value;
-
-}
-
-// acf/update_value - filter for every field
-add_filter('acf/update_value', 'my_acf_update_value', 10, 3);
-function get_string_between($string, $start, $end){
-  $string = ' ' . $string;
-  $ini = strpos($string, $start);
-  if ($ini == 0) return '';
-  $ini += strlen($start);
-  $len = strpos($string, $end, $ini) - $ini;
-  return substr($string, $ini, $len);
-}
-function test_function() {
-  // Set variables
-  $input_test = $_POST['input-test'];
-  // Check variables for fallbacks
-  if (!isset($input_test) || $input_test == "") { $input_test = "Fall Back"; }
-  // Update the field
-  update_field('downloaded', $input_test);
-}
-add_action( 'wp_ajax_nopriv_test_function',  'test_function' );
-add_action( 'wp_ajax_test_function','test_function' );
 
   function get_manual_content($size = false, $forse_single = false)
   {
-    if(get_post_type() == 'live_video') {
-      $embedVideo = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' . get_field('video') . '?autoplay=' . get_field("autoplay") . '"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>';
-      echo $embedVideo;
-      return;
-    }
+    // if(get_post_type() == 'live_video') {
+    //   $embedVideo = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' . get_field('video') . '?autoplay=' . get_field("autoplay") . '"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>';
+    //   echo $embedVideo;
+    //   return;
+    // }
     switch(get_post_format()):
       case "video": ?>
         <div class="post-video-box post-media-body"  data-featured-image-url="<?php if(has_post_thumbnail()) the_post_thumbnail_url( 'thumbnail' ); ?>">
@@ -166,7 +124,7 @@ function create_posttype() {
         'singular_name' => __( 'Tweet' )
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'taxonomies'  => array( 'category' ),
       'rewrite' => array('slug' => 'tweets'),
     )
@@ -179,7 +137,7 @@ function create_posttype() {
         'singular_name' => __( 'Live video' )
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'taxonomies'  => array( 'category' ),
       'rewrite' => array('slug' => 'lives'),
       'supports' => array( 'title', 'editor', 'custom-fields', 'post-formats' )
@@ -199,24 +157,34 @@ add_action( 'init', 'create_posttype' );
 function include_live_videos( $query ) {
   if( $query->is_date() || $query->is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
-     'post', 'nav_menu_item', 'live_video'
+     'post', 'nav_menu_item', 'live_video', 'tweet'
     ));
     $query->set( 'post__not_in', get_option( 'sticky_posts' ));
     return $query;
   }
 }
 add_filter( 'pre_get_posts', 'include_live_videos' );
+
+// function searchAll( $query ) {
+//   if ( $query->is_search ) {
+//     $query->set( 'post_type', array( 'post', 'page', 'feed', 'live_video', 'tweet'));
+//   }
+//   return $query;
+// }
+
+// The hook needed to search ALL content
+// add_filter( 'the_search_query', 'searchAll' );
 // Include tweeets inside archive.php
-function include_tweets( $query ) {
-  if( $query->is_date() || $query->is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
-    $query->set( 'post_type', array(
-     'post', 'nav_menu_item', 'tweet'
-    ));
-    $query->set( 'post__not_in', get_option( 'sticky_posts' ));
-    return $query;
-  }
-}
-add_filter( 'pre_get_posts', 'include_tweets' );
+// function include_tweets( $query ) {
+//   if( $query->is_date() || $query->is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
+//     $query->set( 'post_type', array(
+//      'post', 'nav_menu_item', 'tweet'
+//     ));
+//     $query->set( 'post__not_in', get_option( 'sticky_posts' ));
+//     return $query;
+//   }
+// }
+// add_filter( 'pre_get_posts', 'include_tweets' );
 
 function osetin_show_filter_bar_modified($post_id = false){
   if(!(osetin_get_field('hide_sorting', $post_id) && osetin_get_field('hide_category_filtering', $post_id) && osetin_get_field('hide_format_filtering', $post_id)) && osetin_get_field('show_filter_panel', 'option') && !osetin_get_field('hide_filter_toolbar', $post_id, false)){
