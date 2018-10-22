@@ -16,7 +16,7 @@
             });
 
             const start = () => {
-              mediaRecorder.start(3000);
+              mediaRecorder.start(4500);
             };
 
             const stop = () => {
@@ -51,7 +51,6 @@
         audio.play();
         var file = new FileReader();
         file.readAsDataURL(audio.audioBlob);
-        console.log(id, user);
         file.onloadend = function(e){
           $.ajax({
             url: "/uploadSound.php",
@@ -70,7 +69,7 @@
           recorder = await recordAudio();
           recorder.start();
           $(element).find('.record-audio:first').css('background-color', '#ff0000');
-          await sleep(30000);
+          await sleep(45000);
           if(recorder) {
           $(element).find('.record-audio:first').css('background-color', 'rgba(0, 0, 0, 0.3)');
           audio = await recorder.stop();
@@ -151,17 +150,36 @@ $(document).on('click','.audio', function(){
 $(document).on('click','.record', function(){
        let id = $(this).data('id');
       let user = $(this).data('user');
-      // $(this).find('.record-audio:first').css('background-color', '#ff0000');
       recordStop(id, user, $(this));
-
-      // setInterval(function(){
-        // recordStop(id, user, $(this));
-        // );
 });
-    // $('.record').click(function() {
 
 
-    // });
+$(".index-filter-option-24").click(function(e){
+  e.stopPropagation();
+    window.location.href = 'https://acr18.rheumnow.com/category/osteoporosis/';
+
+});
+
+$(".index-filter-option-16").click(function(e){
+  e.stopPropagation();
+  window.location.href = 'https://acr18.rheumnow.com/category/gout-crystal/';
+});
+
+$(".index-filter-option-21").click(function(e){
+  e.stopPropagation();
+  window.location.href = 'https://acr18.rheumnow.com/category/rheumatoid-arthritis/';
+});
+
+
+$(".index-filter-option-6").click(function(e){
+  e.stopPropagation();
+  window.location.href = 'https://acr18.rheumnow.com/category/as/';
+});
+
+$(".index-filter-option-19").click(function(e){
+  e.stopPropagation();
+  window.location.href = 'https://acr18.rheumnow.com/category/psa/';
+});
 
   } );
 } )( jQuery );

@@ -92,11 +92,11 @@
 				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
                   	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Genentech.svg/640px-Genentech.svg.png" style="width: 150px;" alt="Genentech">
 				  </a>
-                <?php } else { ?>
+                <?php } elseif (!is_category('osteoporosis')) { ?>
                 <a href="https://www.lilly.com/" alt="Eli Lilly and Company" target="_blank">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
                 </a>
-                <?php } ?>
+                <?php  }?>
           </div>
           <!--Hide main menu..
           <div class="menu-activated-on-hover menu-w">
@@ -167,7 +167,9 @@
             </a>
           </div>
           <div class="sponsor">
+            <?php if(!is_category('osteoporosis')) { ?>
               <span>Sponsored by: </span>
+            <?php }?>
                 <?php if(is_category('gout-crystal')) { ?>
 				  <a href="http://www.horizonpharma.com/" alt="Horizon Pharma" target="_blank">
                   <img src="http://logosandbrands.directory/wp-content/themes/directorypress/thumbs/Horizon-Pharma-Inc.-logo.jpg" style="width: 100px;" alt="Horizon Pharma">
@@ -184,7 +186,7 @@
 				  <a href="https://www.gene.com/" alt="Genentech" target="_blank">
                   	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Genentech.svg/640px-Genentech.svg.png" style="width: 150px;" alt="Genentech">
 				  </a>
-                <?php } else { ?>
+                <?php } elseif (!is_category('osteoporosis'))  { ?>
                 <a href="https://www.lilly.com/" alt="Eli Lilly and Company" target="_blank">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Lilly-Logo.svg" style="width: 100px;" alt="">
                 </a>

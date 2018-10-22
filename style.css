@@ -287,28 +287,28 @@ Text Domain: acr18-pluto-by-osetin-child
     background-color: #FFB6A9 !important;
 }
 
-.category-osteoperosis .post-body, .category-osteoperosis .post-meta, .index-filter-option-24 {
+.category-osteoporosis .post-body, .category-osteoporosis .post-meta, .index-filter-option-24 {
     background-color: #FFD043 !important;
 }
 
-.category-osteoperosis .post-meta .meta-like {
+.category-osteoporosis .post-meta .meta-like {
     background-color: #FFD043 !important;
 }
 
-.category-ra-inflammatory-arthritis .post-body, .category-ra-inflammatory-arthritis .post-meta, .index-filter-option-21 {
+.category-rheumatoid-arthritis .post-body, .category-rheumatoid-arthritis .post-meta, .index-filter-option-21 {
     background-color: #B6E3F7 !important;
 }
 
-.category-ra-inflammatory-arthritis .post-meta .meta-like {
+.category-rheumatoid-arthritis .post-meta .meta-like {
     background-color: #B6E3F7 !important;
 }
 
 .category-gout-crystal .featured-items-header,
 .category-as .featured-items-header,
 .category-psa .featured-items-header,
-.category-osteoperosis .featured-items-header,
-.category-ra-inflammatory-arthritis .featured-items-header {
-display: none;
+.category-osteoporosis .featured-items-header,
+.category-rheumatoid-arthritis .featured-items-header {
+display: block;
 }
 
 .load-more-posts-button-w {
@@ -453,6 +453,8 @@ display: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid;
+    z-index: 99;
 }
 
 .avatar-audio i {
@@ -504,6 +506,9 @@ display: none;
     justify-content: center;
     border: 1px solid #FFF;
     background: rgba(0, 0, 0, 0.3);
+        border: 2px solid;
+        z-index: 99;
+
 }
 
 .record-audio i {
@@ -544,3 +549,7 @@ display: none;
     border: 1px solid #75b9dd !important;
     border-radius: 4px !important;
 } 
+.category-list {
+	display: block;
+	overflow: auto;
+}

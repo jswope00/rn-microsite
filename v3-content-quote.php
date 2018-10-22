@@ -8,13 +8,7 @@
     $css_style = "";
   }
   ?>
-  <div class="post-body" style="<?php echo $css_style; ?>">
-
-    <?php if(has_post_thumbnail()): ?>
-      <div class="image-fader"></div>
-    <?php endif?>
-    <div class="quote-content">
-          <!-- :: AUDIO PLAYING LOGIC START :: -->
+   <!-- :: AUDIO PLAYING LOGIC START :: -->
           <?php
 
             $tempAuthor = get_field('audio_author');
@@ -52,7 +46,8 @@
           $tempAuthor = get_field('audio_author');
           ?>
           <div class="audio" id="audio" data-id="<?php echo the_ID(); ?>" data-audio="<?php echo $audioSrc; ?>">
-            <div class="avatar-audio" style="background-image: url('<?php echo $avatar; ?>')">
+            <div class="avatar-audio" style="    top: -0.5rem;
+    right: -0.5rem; background-image: url('<?php echo $avatar; ?>')">
               <i class='fa fa-play'></i>
             </div>
               <div class="d-none">
@@ -77,6 +72,13 @@
             </form>
          <?php } ?>
           <!-- :: AUDIO RECORDING LOGIC START :: -->
+  <div class="post-body" style="<?php echo $css_style; ?>">
+
+    <?php if(has_post_thumbnail()): ?>
+      <div class="image-fader"></div>
+    <?php endif?>
+    <div class="quote-content">
+         
       <div class="quote-icon"><i class="os-icon-thin-042_comment_quote_reply"></i></div>
       <h2 class="post-content entry-content"><a><?php echo os_quote_excerpt(25); ?></a></h2>
       <div class="quote-author">- <?php the_field('quote_author'); ?></div>

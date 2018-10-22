@@ -20,7 +20,13 @@ get_header(); ?>
               echo '<div class="index-filter-sub-label">'.esc_html__('Category', 'pluto').'</div>';
               foreach($categories_to_show_as_buttons as $category_id){
                 // if($index == 4) break;
-                echo '<button class="index-filter-option index-filter-option-'.$category_id.'" data-filter-value="filter-cat-'.$category_id.'">'.get_the_category_by_ID($category_id).'</button>';
+                                echo $category_id;
+
+                if($category_id == 6 || $category_id == 16 || $category_id == 19 || $category_id == 24  || $category_id == 21) {
+                  echo '<a class="index-filter-option index-filter-option-'.$category_id.' href="' . get_category_link( $category_id ) .'"'.get_the_category_by_ID($category_id).'</a>';
+                } else {
+                  echo '<button class="index-filter-option index-filter-option-'.$category_id.'" data-filter-value="filter-cat-'.$category_id.'">'.get_the_category_by_ID($category_id).'</button>';
+                }
                 $index++;
               }
               } ?>

@@ -17,8 +17,11 @@ get_header(); ?>
               <?php {
               $categories_to_show_as_buttons = osetin_get_field('categories_to_show_as_buttons', $post_id, false);
               $index = 1;
+
               echo '<div class="index-filter-sub-label">'.esc_html__('Category', 'pluto').'</div>';
               foreach($categories_to_show_as_buttons as $category_id){
+                                              echo $category_id;
+
                 // if($index == 4) break;
                 echo '<button class="index-filter-option index-filter-option-'.$category_id.'" data-filter-value="filter-cat-'.$category_id.'">'.get_the_category_by_ID($category_id).'</button>';
                 $index++;
