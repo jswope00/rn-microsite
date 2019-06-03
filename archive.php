@@ -6,7 +6,7 @@ get_header(); ?>
 <div class="main-content-w">
     <?php require_once(get_template_directory() . '/inc/partials/hero-image.php') ?>
     <?php require_once(get_template_directory() . '/inc/partials/featured-slider.php') ?>
-    <?php osetin_show_filter_bar_modified(1474); ?>
+    <?php osetin_show_filter_bar_modified(7); ?>
 
 
     <div class="os-container-bottom">
@@ -15,7 +15,7 @@ get_header(); ?>
           <!--<div class="index-filter-label"><i class="os-new-icon os-new-icon-thin-0041_filter_funnel"></i><span>Filter</span></div>-->
             <div class="index-filter-categories">
               <?php {
-              $categories_to_show_as_buttons = osetin_get_field('categories_to_show_as_buttons', 1474, false);
+              $categories_to_show_as_buttons = osetin_get_field('categories_to_show_as_buttons', 7, false);
               $index = 1;
               echo '<div class="index-filter-sub-label">'.esc_html__('Category', 'pluto').'</div>';
               foreach($categories_to_show_as_buttons as $category_id){
@@ -34,13 +34,25 @@ get_header(); ?>
   <div class="main-content-i">
     <div class="content side-padded-content">
       <?php require_once(get_template_directory() . '/inc/partials/top-ad-sidebar.php') ?>
-      <div id="primary-content" data-page-id="<?php echo get_the_ID(); ?>" class="index-isotope v3 <?php echo os_lightbox_posts_enabled_class(); ?>" data-layout-mode="<?php echo (os_get_use_fixed_height_index_posts() == true) ? 'fitRows' : 'masonry'; ?>">
+      <div id="primary-content" data-page-id="<?php echo get_the_ID(); ?>" class="index-isotope isotope-simple v3 <?php echo os_lightbox_posts_enabled_class(); ?>" data-layout-mode="<?php echo (os_get_use_fixed_height_index_posts() == true) ? 'fitRows' : 'masonry'; ?>">
         <?php
         require_once(get_template_directory() . '/inc/osetin-custom-index-query.php');
 
 
         $double_width_posts_arr = osetin_get_double_width_posts_arr();
         $os_current_box_counter = 1; $os_ad_block_counter = 0;
+        $forse_hide_element_read_more = true;
+        $forse_hide_element_date = true;
+
+        $args = array(
+          'paged' => $paged,
+          'posts_per_page' => get_option('posts_per_page'),
+          'post_status' => 'publish',
+          'post_type' => array('post', 'tweet', 'live_video')
+
+        );
+        $osetin_query = new WP_Query( $args );
+
         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php get_template_part( 'v3-content', get_post_format() ); ?>
           <?php os_ad_between_posts(); ?>
@@ -50,7 +62,7 @@ get_header(); ?>
       <?php if(os_get_next_posts_link($wp_query)): 
       ?>
 
-        <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($wp_query); ?>" data-layout-type="v3"></div>
+        <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($wp_query); ?>" data-layout-type="v3-simple"></div>
         <?php if((os_get_current_navigation_type() == 'infinite_button') || (os_get_current_navigation_type() == 'infinite')): ?>
         <div class="load-more-posts-button-w">
           <a href="#"><i class="os-icon-plus"></i> <span><?php _e('Load More Posts', 'pluto'); ?></span></a>

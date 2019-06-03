@@ -51,6 +51,7 @@ get_header(); ?>
       ?>
 
         <div class="isotope-next-params" data-params="<?php echo os_get_next_posts_link($wp_query); ?>" data-layout-type="v3"></div>
+        <div class="infinite-scroll-trigger"></div>
         <?php if((os_get_current_navigation_type() == 'infinite_button') || (os_get_current_navigation_type() == 'infinite')): ?>
         <div class="load-more-posts-button-w">
           <a href="#"><i class="os-icon-plus"></i> <span><?php _e('Load More Posts', 'pluto'); ?></span></a>
